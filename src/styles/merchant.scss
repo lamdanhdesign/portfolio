@@ -1,0 +1,436 @@
+.mobile-app-section {
+    max-width: 1440px;
+    height: 1041px;
+    background: linear-gradient(180deg, #572B8F -8.94%, #120030 107.08%);
+    color: #fff;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+
+
+    .background {
+        width: 1444.5px;
+        height: 146px;
+        flex-shrink: 0;
+        position: absolute;
+        z-index: 13;
+        top: 0;
+        background: url('../assets/images/Vector 3.png') no-repeat;
+    }
+
+    .background-1 {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        aspect-ratio: 1578/1051;
+        opacity: 0.25;
+        background: url('../assets/images/6538478-01 2.png') no-repeat;
+        mix-blend-mode: luminosity;
+        position: absolute;
+        z-index: 12;
+    }
+
+    .content {
+        width: 1004px;
+        margin: 0 auto 60px auto;
+
+        .title {
+            font-size: 3rem;
+            width: 1004px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #b884ff, #f7a9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            display: flex;
+
+            height: 108px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            text-align: center;
+            font-family: Inter;
+            font-size: 120px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 52px;
+            /* 43.333% */
+            background: linear-gradient(180deg, #FFF -30.77%, rgba(255, 255, 255, 0.00) 215.38%);
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: #FFB45E;
+            text-align: center;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: italic;
+            font-weight: 400;
+            line-height: 32px;
+            /* 123.077% */
+        }
+
+        .desc {
+            color: #FF6CCE;
+
+            /* Font/Heading 5/Bold */
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
+            color: #FFF;
+            text-align: center;
+
+            /* Font/Heading 5/Regular */
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            /* 123.077% */
+            width: 1004px;
+        }
+    }
+
+    .image-mobile {
+
+        width: 674px;
+        height: 674px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: relative; // cần để ảnh con position tuyệt đối
+
+        margin-top: 30px;
+
+        .image-mobile-background {
+            width: 674px;
+            height: 674px;
+            border-radius: 50%;
+            background: radial-gradient(50% 50% at 50% 50%,
+                    rgba(213, 110, 255, 0.4) 0%,
+                    rgba(180, 126, 247, 0) 100%);
+        }
+
+        .image-mobile-center {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); // canh chính giữa
+            width: 320px; // bạn tùy chỉnh lại kích thước ảnh
+            height: auto;
+            z-index: 2; // nổi lên trên background
+        }
+
+        .image-mobile-1 {
+            position: absolute;
+            left: 0;
+            z-index: 3;
+            width: 251px;
+            height: 122px;
+            flex-shrink: 0;
+            aspect-ratio: 251/122;
+            top: 48%;
+        }
+
+        .image-mobile-2 {
+            position: absolute;
+            right: 0;
+            z-index: 3;
+            width: 265px;
+            height: 122px;
+            flex-shrink: 0;
+            aspect-ratio: 265/122;
+            top: 20%;
+        }
+
+        .image-mobile-3 {
+            position: absolute;
+            right: 0;
+            width: 221px;
+            height: 216px;
+            flex-shrink: 0;
+            aspect-ratio: 221/216;
+            bottom: 60px;
+            z-index: 3;
+        }
+    }
+
+    .background-bot {
+        width: 100%;
+        height: auto;
+        position: relative;
+        z-index: 5; // 👈 thêm dòng này
+        margin-top: 100px;
+
+        img {
+            position: absolute;
+            z-index: 1;
+            bottom: 0; // nếu bạn muốn nó nằm sát dưới
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        span {
+            position: absolute;
+            z-index: 2;
+            bottom: 30px; // điều chỉnh vị trí tùy ý
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+}
+
+.mobile-app-section-2 {
+    max-width: 1440px;
+    height: 1000px;
+    background: linear-gradient(180deg, #572B8F -8.94%, #120030 107.08%);
+    color: #fff;
+
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+
+
+    .background {
+        width: 1444.5px;
+        height: 146px;
+        flex-shrink: 0;
+        position: absolute;
+        z-index: 13;
+        top: 0;
+        background: url('../assets/images/Vector 3.png') no-repeat;
+    }
+
+    .background-1 {
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        aspect-ratio: 1578/1051;
+        opacity: 0.25;
+        background: url('../assets/images/6538478-01 2.png') no-repeat;
+        mix-blend-mode: luminosity;
+        position: absolute;
+        z-index: 12;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1045px;
+        margin: 0 auto 60px auto;
+
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #b884ff, #f7a9ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: #ffba6b;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+
+        .desc {
+            font-size: 1rem;
+            color: #e4d8ff;
+            line-height: 1.6;
+        }
+    }
+
+    .image-mobile {
+
+        width: 674px;
+        height: 674px;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        position: relative; // cần để ảnh con position tuyệt đối
+
+        margin-top: 30px;
+
+        .image-mobile-background {
+            width: 674px;
+            height: 674px;
+            border-radius: 50%;
+            background: radial-gradient(50% 50% at 50% 50%,
+                    rgba(213, 110, 255, 0.4) 0%,
+                    rgba(180, 126, 247, 0) 100%);
+        }
+
+        .image-mobile-center {
+            position: absolute;
+            top: 48%;
+            left: 28%;
+            transform: translate(-50%, -50%); // canh chính giữa
+            width: 320px; // bạn tùy chỉnh lại kích thước ảnh
+            height: auto;
+            z-index: 3; // nổi lên trên background
+        }
+
+        .image-mobile-center-2 {
+            position: absolute;
+            top: 60%;
+            left: 68%;
+            transform: translate(-50%, -50%); // canh chính giữa
+            width: 320px; // bạn tùy chỉnh lại kích thước ảnh
+            height: auto;
+            z-index: 2; // nổi lên trên background
+        }
+
+        .image-mobile-1 {
+            position: absolute;
+            left: 0;
+            z-index: 3;
+            width: 251px;
+            height: 122px;
+            flex-shrink: 0;
+            aspect-ratio: 251/122;
+            top: 48%;
+        }
+
+        .image-mobile-2 {
+            position: absolute;
+            right: 0;
+            z-index: 3;
+            width: 265px;
+            height: 122px;
+            flex-shrink: 0;
+            aspect-ratio: 265/122;
+            top: 20%;
+        }
+
+        .image-mobile-3 {
+            position: absolute;
+            right: 0;
+            width: 221px;
+            height: 216px;
+            flex-shrink: 0;
+            aspect-ratio: 221/216;
+            bottom: 60px;
+            z-index: 3;
+        }
+    }
+
+    .background-bot {
+        width: 65%;
+        height: auto;
+        position: relative;
+        z-index: 5; // 👈 thêm dòng này
+        margin-top: 100px;
+
+        img {
+            position: absolute;
+            z-index: 1;
+            bottom: 0; // nếu bạn muốn nó nằm sát dưới
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        span {
+            width: 100%;
+            position: absolute;
+            z-index: 2;
+            bottom: 25px; // điều chỉnh vị trí tùy ý
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 1.5rem;
+            color: #fff;
+            font-weight: 600;
+            color: #FFF;
+            text-align: center;
+
+            /* Font/Heading 4/SemiBold */
+            font-family: Inter;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            /* 117.647% */
+            letter-spacing: 0.085px;
+        }
+    }
+
+    .content-wrap {
+        max-width: 482px;
+        margin-top: -100px;
+        height: auto;
+
+        .content-text {
+            li {
+                color: #fff;
+                text-align: left;
+                font-family: Inter;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 32px;
+
+                span {
+                    color: var(--Light-Mode-Gray-Scale-0, #FFF);
+
+                    /* Font/Heading 5/Regular */
+                    font-family: Inter;
+                    font-size: 22px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 32px;
+                }
+            }
+        }
+    }
+
+    .background-arrow {
+
+        width: 100%;
+        height: 70px;
+        position: absolute;
+        z-index: 10;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+
+        img {
+            width: 52px;
+            height: 52px;
+            transform: rotate(-90deg);
+            flex-shrink: 0;
+            aspect-ratio: 1/1;
+        }
+    }
+
+    .background-phi-hanh-gia {
+        right: 6%;
+        bottom: 0;
+        position: absolute;
+        width: 250px;
+        height: 214px;
+        flex-shrink: 0;
+        aspect-ratio: 125/107;
+    }
+}

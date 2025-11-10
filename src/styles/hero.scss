@@ -1,0 +1,142 @@
+.wrapp {
+    width: 100%;
+    height: auto;
+
+    .hero-section {
+        width: 100%;
+        height: 832px;
+        justify-content: center;
+    }
+
+    .hero-container {
+        background: rgb(243, 197, 197);
+        height: 100%;
+        max-width: 1440px;
+        padding-top: 104px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+        background: url("../assets/images/1.png") no-repeat;
+
+        .background-bot {
+            max-width: 1440px;
+            height: 538px;
+            flex-shrink: 0;
+            aspect-ratio: 1441/538;
+            background: url("../assets/images/2.png") no-repeat;
+            position: absolute;
+            bottom: -104px;
+
+            z-index: 14;
+        }
+    }
+
+    .welcome {
+        text-align: center;
+        width: 100%;
+        height: 52px;
+        /* background: rgb(110, 174, 247); */
+    }
+
+    .welcome_portfolio {
+        width: 865px;
+        height: auto;
+    }
+
+
+    .portfolio {
+        width: 100%;
+        /* height: 152px; */
+        display: flex;
+        /* align-items: center; */
+        text-align: center;
+        flex-direction: column;
+    }
+
+    .port-text {
+        font-family: 'iCiel Crocante', sans-serif;
+        font-size: 140px;
+        font-style: normal;
+        font-weight: 1000;
+        line-height: 1;
+        /* 0% */
+        color: #F2D0FF;
+        // letter-spacing: 5.6px;
+
+        background: linear-gradient(180deg, #F2D0FF 53.43%, rgba(242, 208, 255, 0.00) 135.54%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+
+    }
+
+    .folio-div {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: end;
+        margin-top: 5px;
+        height: 174px;
+        /* background: white; */
+    }
+
+    .porfolio-text {
+        color: #F2D0FF;
+        font-family: 'iCiel Crocante', sans-serif;
+        font-size: 200px;
+        font-style: normal;
+        font-weight: 1000;
+        line-height: 1;
+        letter-spacing: 45px;
+    }
+
+    .porfolio-cv {
+        position: relative;
+        height: 100%;
+        display: flex;
+        align-items: end;
+    }
+
+    .porfolio-cv>img {
+        position: absolute;
+        top: -146px;
+        left: 21px;
+    }
+
+    .btn-my-cv {
+        display: flex;
+        width: 157px;
+        height: 40px;
+        padding: 8px 12px;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        flex-shrink: 0;
+        border-radius: 4px;
+        background: #FF16B1;
+        margin-bottom: 18px;
+        color: #fff;
+
+        color: #FFF;
+
+        /* Font/Subtitle 1/Bold */
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px;
+        /* 125% */
+        letter-spacing: 0.2px;
+    }
+
+    .welcome-text {
+        color: #F2D0FF;
+
+        /* Font/Heading 3/SemiBold */
+        font-family: Inter;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 52px;
+    }
+}

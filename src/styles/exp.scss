@@ -1,0 +1,220 @@
+.exp {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    background: linear-gradient(180deg, #3d0086 8.4%, #120030 121.34%);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /* 👈 Đưa nội dung lên phía trên */
+    margin-top: -55px;
+    /* 👈 Tạo khoảng cách trên */
+    overflow: hidden;
+    z-index: 12;
+
+    .exp-background {
+        width: 100%;
+        height: 100%;
+        background: url('../assets/images/6538478-01 1.png') center/cover no-repeat;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+
+    .exp-background-color {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #3b0183;
+        opacity: 0.25;
+        mix-blend-mode: luminosity;
+        z-index: -1;
+    }
+
+    .exp-background-color-1-ellipse {
+        width: 2441px;
+        height: 1007px;
+        border-radius: 66%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+
+        /* nền trong suốt */
+        background: transparent;
+
+        /* viền trắng nhẹ */
+        border: 1px solid #300072;
+        /* ánh sáng lan quanh viền */
+        box-shadow:
+            0 0 36px 50px rgba(255, 255, 255, 0.1);
+
+        /* ánh vàng nhạt mềm ở xa */
+
+
+        /* làm ánh sáng viền mềm hơn */
+    }
+
+    .exp-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        /* Khoảng cách giữa title và mô tả */
+    }
+
+    .exp-title {
+        text-align: center;
+        margin-top: 88px;
+
+
+        .title {
+            text-align: center;
+
+            .p_1 {
+                font-family: Inter;
+                font-size: 150px;
+                font-weight: 700;
+                line-height: 1.1;
+                margin: 0;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .p_2 {
+                font-family: Inter;
+                font-size: 75px;
+                font-weight: 700;
+                line-height: 1.1;
+                margin-top: -60px;
+                /* Đưa “experience” gần hơn với “Work” */
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+
+        .p_3 {
+            display: flex;
+
+            flex-direction: column;
+            justify-content: center;
+            flex: 1 0 0;
+
+            color: #57A9FF;
+            text-align: center;
+            font-family: SVN-Magellin;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 75% */
+            letter-spacing: 0.048px;
+            margin-top: -10px;
+        }
+    }
+
+    .exp-mo-ta {
+
+        max-width: 1010px;
+        text-align: center;
+        margin-top: 36px;
+
+        p {
+            color: #ff6cce;
+            font-family: Inter;
+            font-size: 26px;
+            font-weight: 700;
+            line-height: 32px;
+            margin: 0;
+        }
+    }
+
+    .exp-hanh-tinh {
+        position: absolute;
+        bottom: 31%;
+        left: 0;
+        width: 100%;
+        height: 525px;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        img {
+            position: absolute;
+        }
+
+        .hanh-tinh-blue {
+            top: 54;
+            left: 100px;
+        }
+
+        .hanh-tinh-sunny {
+            top: 60%;
+            right: 100px;
+        }
+
+        .hanh-tinh-tim {
+            top: 77%;
+        }
+
+        .graphic-design {
+            display: flex;
+            width: 157px;
+            height: 40px;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            background: #007DFF;
+            position: absolute;
+            left: 145px;
+            top: 96%;
+            color: #fff;
+        }
+
+        .mobile-app {
+
+            display: flex;
+            width: 157px;
+            height: 40px;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            background: #FF16B1;
+
+            position: absolute;
+            bottom: -34%;
+            color: #fff;
+        }
+
+        .web-design {
+            display: flex;
+            width: 157px;
+            height: 40px;
+            padding: 8px 12px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+            border-radius: 4px;
+            background: #FF7F00;
+            position: absolute;
+            right: 130px;
+            top: 95%;
+            color: #fff;
+        }
+    }
+}

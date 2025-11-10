@@ -1,0 +1,113 @@
+.general {
+    height: 1139px;
+    width: 100%;
+    align-self: stretch;
+    background: linear-gradient(0deg, #9B6DD4 -4.1%, #723FB3 55.53%, #120030 106.01%);
+    position: relative;
+    margin-top: -20px;
+
+    .general-background {
+        width: 100%;
+        height: 813.867px;
+        flex-shrink: 0;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .background_1 {
+            width: 100%;
+            height: 813.867px;
+            flex-shrink: 0;
+            aspect-ratio: 1343.89/813.87;
+            background: url('../assets/images/background_1.png');
+            mix-blend-mode: plus-lighter;
+            position: absolute;
+        }
+
+        .background_2 {
+            position: absolute;
+            width: 100%;
+            height: 813.867px;
+            flex-shrink: 0;
+            aspect-ratio: 1343.89/813.87;
+            background: url('../assets/images/background_2.png');
+            mix-blend-mode: plus-lighter;
+        }
+    }
+
+    .title_info {
+        position: absolute;
+        top: 60px;
+        /* 👈 khoảng cách từ trên xuống, bạn có thể điều chỉnh */
+        left: 50%;
+        transform: translateX(-50%);
+        /* 👈 căn giữa ngang */
+        text-align: center;
+        /* căn giữa nội dung text */
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+
+        p:first-child {
+            color: #57A9FF;
+            text-align: center;
+            width: 1014px;
+            /* Font/Heading 2/Bold */
+            font-family: Inter;
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 68px;
+            /* 113.333% */
+            letter-spacing: -0.3px;
+        }
+
+        p:last-child {
+            color: #FFF;
+            text-align: center;
+            width: 1014px;
+            /* Font/Heading 5/Regular */
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+
+            /* 123.077% */
+        }
+    }
+
+    .general-images {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 1440px;
+        height: 1032px;
+        padding-top: 90px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 248/129;
+        }
+    }
+
+    .general-images_2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 146px;
+        position: absolute;
+        bottom: 0;
+
+        img {
+            width: 100%;
+            height: 100%;
+            aspect-ratio: 248/129;
+        }
+    }
+}

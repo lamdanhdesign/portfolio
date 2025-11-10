@@ -1,0 +1,131 @@
+// SCSS for the Personal section converted from Figma node 81:613
+$purple-1: #3d0086;
+$purple-2: #120030;
+$accent: #ff16b1;
+
+.personal-section {
+    position: relative;
+    width: 100%;
+    background: linear-gradient(to top, $purple-1 0%, $purple-2 100%);
+    color: #fff;
+    overflow: hidden;
+
+    &__bg img {
+        display: block;
+        width: 140%;
+        max-width: none;
+        position: absolute;
+        left: -10%;
+        top: 0;
+        opacity: 0.95;
+    }
+
+    &__heading {
+        text-align: center;
+        padding-top: 36px;
+        padding-bottom: 20px;
+
+        &-img img {
+            display: block;
+            margin: 0 auto;
+        }
+
+        & .personal-section__small {
+            color: #57A9FF;
+            opacity: 0.8;
+            margin-top: 8px;
+            font-family: 'SVN-Magellin', serif;
+            font-size: 22px;
+        }
+    }
+
+    &__center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+        padding: 48px 20px;
+
+        /* portrait and card containers share layout via parent rules */
+
+        .personal-section__portrait img {
+            width: 420px;
+            max-width: 45%;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+            border-radius: 6px;
+        }
+
+        .personal-section__card {
+            width: 300px;
+            background: linear-gradient(180deg, #D56EFF 0%, #5000BD 100%);
+            border-radius: 12px;
+            padding: 12px;
+            color: #333;
+
+            &--left {
+                transform: rotate(-8deg);
+            }
+
+            &--right {
+                transform: rotate(8deg);
+            }
+
+            h3,
+            h4 {
+                margin: 0 0 8px;
+                color: #5000BD;
+            }
+
+            blockquote {
+                font-style: italic;
+                margin: 8px 0;
+                color: #333;
+            }
+
+            p {
+                color: #333;
+            }
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                color: #333;
+            }
+        }
+    }
+
+    &__posters {
+        display: flex;
+        gap: 18px;
+        justify-content: center;
+        margin: 24px 0 80px;
+
+        .poster img {
+            width: 220px;
+            height: auto;
+            display: block;
+            border-radius: 6px;
+        }
+    }
+
+    &__decor img {
+        width: 200%;
+        display: block;
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .personal-section__center {
+        flex-direction: column;
+    }
+
+    .personal-section__portrait img {
+        width: 300px;
+    }
+
+    .personal-section__posters .poster img {
+        width: 120px;
+    }
+}
