@@ -6,4 +6,5 @@ export default defineConfig({
   build: {
     outDir: "docs", // Thư mục build
   },
+  base: "./",
 });
