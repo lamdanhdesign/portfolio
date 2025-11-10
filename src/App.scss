@@ -1,0 +1,163 @@
+.layout {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+// ===== VỆT SÁNG SIÊU TO KHỔNG LỒ - CHẠY SIÊU CHẬM TỪ TRÁI-TRÊN → PHẢI-DƯỚI =====
+.mirror-shine-ultra {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: inherit;
+
+    // Vệt sáng SIÊU TO - SIÊU CHẬM NHƯ RÙA
+    &::before {
+        content: '';
+        position: absolute;
+        top: -200%;
+        left: -200%;
+        width: 300%; // Vẫn to bự
+        height: 300%; // Vẫn dài ngoằng
+
+        background: linear-gradient(135deg,
+                transparent 0%,
+                transparent 30%,
+                rgba(255, 255, 255, 0.2) 45%,
+                rgba(255, 255, 255, 0.7) 50%,
+                rgba(255, 255, 255, 0.2) 55%,
+                transparent 70%,
+                transparent 100%);
+
+        // Ban đầu: ngoài góc trái-trên
+        transform: translateX(-150%) translateY(-120%) rotate(45deg);
+        transition: transform 2.8s cubic-bezier(0.19, 0.01, 0.2, 1); // CHẬM GẤP ĐÔI + MƯỢT NHƯ TƠ
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+        filter: blur(1.5px);
+    }
+
+    // Hover → chạy SIÊU CHẬM từ trái-trên → phải-dưới
+    &:hover::before {
+        opacity: 1;
+        transform: translateX(150%) translateY(150%) rotate(45deg);
+    }
+
+    // Reset tức thì khi rời hover
+    &:not(:hover)::before {
+        opacity: 0;
+        transform: translateX(-120%) translateY(-120%) rotate(45deg);
+        transition: none;
+    }
+
+    // Siêu mượt
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+}
+
+// Phiên bản SIÊU MẠNH + SIÊU CHẬM cho nền tối
+.mirror-shine-ultra-strong {
+    &::before {
+        background: linear-gradient(135deg,
+                transparent 0%,
+                transparent 25%,
+                rgba(255, 255, 255, 0.4) 45%,
+                rgba(255, 255, 255, 1) 50%,
+                rgba(255, 255, 255, 0.4) 55%,
+                transparent 75%,
+                transparent 100%);
+        filter: blur(1px);
+    }
+
+    &:hover::before {
+        transition: transform 3.2s cubic-bezier(0.16, 0.84, 0.44, 1); // CHẬM NHẤT HỆ MẶT TRỜI
+    }
+}
+
+
+
+// ===== VỆT SÁNG SIÊU TO - CHẬM - HỖ TRỢ HOVER + TOUCH (ĐIỆN THOẠI) =====
+.mirror-shine-touch {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: inherit;
+    -webkit-tap-highlight-color: transparent; // Tắt highlight mặc định mobile
+
+    // Vệt sáng SIÊU TO
+    &::before {
+        content: '';
+        position: absolute;
+        top: -200%;
+        left: -200%;
+        width: 300%;
+        height: 300%;
+
+        background: linear-gradient(135deg,
+                transparent 0%,
+                transparent 30%,
+                rgba(255, 255, 255, 0.2) 45%,
+                rgba(255, 255, 255, 0.7) 50%,
+                rgba(255, 255, 255, 0.2) 55%,
+                transparent 70%,
+                transparent 100%);
+
+        // Ban đầu: ngoài góc trái-trên
+        transform: translateX(-150%) translateY(-120%) rotate(45deg);
+        transition: transform 2.8s cubic-bezier(0.19, 0.01, 0.2, 1);
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+        filter: blur(1.5px);
+    }
+
+    // === HOVER (PC) + TOUCH/ACTIVE (MOBILE) ===
+    &:hover::before,
+    &:active::before {
+        opacity: 1;
+        transform: translateX(150%) translateY(150%) rotate(45deg);
+    }
+
+    // Reset khi rời hover HOẶC thả tay (mobile)
+    &:not(:hover):not(:active)::before {
+        opacity: 0;
+        transform: translateX(-150%) translateY(-120%) rotate(45deg);
+        transition: none; // Reset tức thì → chạm lại vẫn chạy mới
+    }
+
+    // Siêu mượt mobile + desktop
+    transform: translateZ(0);
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
+
+// Phiên bản MẠNH cho nền tối (mobile cũng đẹp)
+.mirror-shine-touch-strong {
+    &::before {
+        background: linear-gradient(135deg,
+                transparent 0%,
+                transparent 25%,
+                rgba(255, 255, 255, 0.4) 45%,
+                rgba(255, 255, 255, 1) 50%,
+                rgba(255, 255, 255, 0.4) 55%,
+                transparent 75%,
+                transparent 100%);
+        filter: blur(1px);
+    }
+
+    &:hover::before,
+    &:active::before {
+        transition: transform 3.2s cubic-bezier(0.16, 0.84, 0.44, 1);
+    }
+}

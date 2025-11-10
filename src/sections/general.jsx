@@ -11,9 +11,11 @@ const General = () => {
         </div>
         <div className="title_info">
           <p>Hành trình 3 năm kinh nghiệm</p>
-          <p>
-            Nền tảng 2 năm từ Graphic Design đã giúp mình chuyển đổi và tập
-            trung toàn lực với 1 năm kinh nghiệm trong UX/UI Design hiện tại.
+          <p className="exp-mo-ta_p">
+            Nền tảng <span>2 năm từ Graphic Design</span> đã giúp mình chuyển
+            đổi và tập trung toàn lực với{" "}
+            <span>1 năm kinh nghiệm trong UX/UI Design</span>
+            hiện tại.
           </p>
         </div>
         <div className="general-images">

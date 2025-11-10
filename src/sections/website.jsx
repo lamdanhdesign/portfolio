@@ -34,9 +34,11 @@ const WebsiteSection = () => {
               <>
                 <p className="subtitle">Cầu nối giữa Ứng dụng và Cộng đồng</p>
                 <p className="desc">
-                  Website được thiết kế trực quan, đóng vai trò là cổng thông
-                  tin chính, cung cấp hướng dẫn sử dụng toàn diện và tối ưu hóa
-                  trải nghiệm đăng ký đối tác.
+                  Website được thiết kế trực quan, đóng vai trò là{" "}
+                  <span>cổng thông tin chính</span>, cung cấp{" "}
+                  <span>hướng dẫn sử dụng</span>
+                  toàn diện và tối ưu hóa trải nghiệm{" "}
+                  <span>đăng ký đối tác.</span>
                 </p>
               </>
             ) : (
@@ -45,9 +47,10 @@ const WebsiteSection = () => {
                   Website E-commerce: Kiến tạo Trải nghiệm Mua sắm Trực tuyến
                 </p>
                 <p className="desc-2">
-                  Thiết kế website với giao diện trực quan, tập trung vào bày
-                  trí sản phẩm thông minh và tối ưu hóa luồng mua sắm để nâng
-                  cao trải nghiệm "đi chợ" trực tuyến.
+                  Thiết kế website với <span>giao diện trực quan,</span> tập
+                  trung vào <span>bày trí sản phẩm</span> thông minh và{" "}
+                  <span>tối ưu hóa luồng mua sắm</span> để nâng cao trải nghiệm
+                  "đi chợ" trực tuyến.
                 </p>
               </>
             )}

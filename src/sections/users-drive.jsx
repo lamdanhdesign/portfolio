@@ -30,14 +30,16 @@ const UsersDriveSection = () => {
           <h2 className="title">Mobile App Giao hàng</h2>
           {isUser ? (
             <p className="desc">
-              Ứng dụng giao hàng linh hoạt, hỗ trợ giao đa điểm, theo dõi đơn
-              hàng liên tục và cam kết hiển thị giá cước minh bạch ngay từ đầu.
+              Ứng dụng giao hàng linh hoạt, hỗ trợ{" "}
+              <span>giao đa điểm, theo dõi đơn hàng liên tục</span> và cam kết
+              hiển thị <span>giá cước minh bạch</span> ngay từ đầu.
             </p>
           ) : (
             <p className="desc-2">
-              Ứng dụng Tài xế được thiết kế tối giản. Đây là công cụ giúp tài xế
-              tiếp nhận đơn nhanh chóng, điều hướng tối ưu và theo dõi hiệu suất
-              làm việc.
+              Ứng dụng Tài xế được <span>thiết kế tối giản.</span> Đây là công
+              cụ giúp tài xế{" "}
+              <span>tiếp nhận đơn nhanh chóng, điều hướng tối ưu</span> và{" "}
+              <span>theo dõi hiệu suất làm việc.</span>
             </p>
           )}
           <div className="content-btn">

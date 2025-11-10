@@ -3,20 +3,18 @@
     max-width: 1440px;
 
     background: #fff;
-    display: flex;
-    flex-direction: column;
+
     align-items: center;
-    padding: 60px 20px;
+    padding: 60px 0px;
     font-family: 'Segoe UI', sans-serif;
 
     display: flex;
 
     flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
+
     gap: 71px;
     align-self: stretch;
-    height: 558px;
+    height: 479px;
 }
 
 .stripe {
@@ -201,8 +199,17 @@
 .footer {
     margin-top: 40px;
     font-size: 16px;
-    color: #666;
+    color: #fff;
     font-weight: 500;
+    display: flex;
+    padding: 10px 0px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background: #150234;
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
 }
 
 /* Responsive */

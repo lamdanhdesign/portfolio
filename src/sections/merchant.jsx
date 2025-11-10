@@ -8,7 +8,9 @@ import childMobile_3 from "../assets/images/9fdbe0eef77cc84e646e57dfd1d0501c3b9d
 import backgroundBot from "../assets/images/bot.png";
 import phiHanhGia from "../assets/images/mobile-app-section/CUTE_ASTRONOUT-02.png";
 import leftArrow from "../assets/images/mobile-app-section/9d399455e8c0e5fc8b46de6832cd92f3ec3d2487.gif";
+import { motion } from "motion/react";
 const MerchantSection = () => {
+  //
   return (
     <>
       {" "}
@@ -17,14 +19,24 @@ const MerchantSection = () => {
         <div className="background"></div>
         <div className="background-1"></div>
         <div className="content">
-          <h2 className="title">Mobile App</h2>
+          <motion.h2
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: false }}
+            transition={{ duration: 2, delay: 0.7 }}
+            className="title"
+          >
+            Mobile App
+          </motion.h2>
           <p className="subtitle">
             Tối ưu hóa quy trình vận hành cửa hàng bằng nền tảng di động.
           </p>
           <p className="desc">
-            Thiết kế giao diện trực quan, cho phép quản lý toàn diện thực đơn,
-            theo dõi và xử lý đơn hàng liên mạch, tăng tốc độ vận hành và giảm
-            thiểu sai sót.
+            Thiết kế giao diện trực quan, cho phép{" "}
+            <span>
+              quản lý toàn diện thực đơn, theo dõi và xử lý đơn hàng liên mạch
+            </span>{" "}
+            ,tăng tốc độ vận hành và giảm thiểu sai sót.
           </p>{" "}
           <div className="image-mobile">
             <div className="image-mobile-background"></div>

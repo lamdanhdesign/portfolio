@@ -52,31 +52,45 @@
                 align-items: center;
                 z-index: 999;
                 position: relative;
+                margin-top: 25px;
+                margin-bottom: -20px;
 
                 .slog {
                     border-right: 1px solid #fff;
                     display: flex;
-                    width: 196px;
+                    width: 227px;
                     padding: 8px 12px;
                     justify-content: center;
                     align-items: center;
                     gap: 10px;
                     flex-shrink: 0;
                     cursor: pointer;
+
+                    color: var(--Light-Mode-Gray-Scale-0, #FFF);
+                    font-family: Inter;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0.03px;
+                }
+
+
+                .slog:last-child {
+                    border-right: none;
                 }
             }
 
         }
 
         .title {
-            width: 806px;
-
+            width: 1011px;
             text-align: center;
             font-family: Inter;
             font-size: 150px;
             font-style: normal;
             font-weight: 700;
-            line-height: 52px;
+            line-height: 175px;
             /* 34.667% */
 
             background: linear-gradient(180deg, #FFF -30.77%, rgba(255, 255, 255, 0.00) 215.38%);
@@ -86,20 +100,20 @@
         }
 
         .subtitle {
-            width: 806px;
-
+            width: 1011px;
             text-align: center;
             font-family: Inter;
             font-size: 75px;
             font-style: normal;
             font-weight: 700;
-            line-height: 52px;
+            line-height: 90px;
             /* 69.333% */
 
             background: linear-gradient(180deg, #FFF -58.65%, rgba(255, 255, 255, 0.00) 234.62%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-top: -46px;
         }
 
 

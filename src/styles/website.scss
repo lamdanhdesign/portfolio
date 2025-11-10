@@ -93,17 +93,18 @@
             font-style: normal;
             font-weight: 400;
             line-height: 32px;
-            /* 123.077% */
-            /* 123.077% */
 
-            // color: #FF6CCE;
 
-            // /* Font/Heading 5/Bold */
-            // font-family: Inter;
-            // font-size: 26px;
-            // font-style: normal;
-            // font-weight: 700;
-            // line-height: 32px;
+            span {
+                color: #FF6CCE;
+
+                /* Font/Heading 5/Regular */
+                font-family: Inter;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+            }
         }
 
         .desc-2 {
@@ -117,6 +118,17 @@
             font-weight: 400;
             line-height: 32px;
             /* 123.077% */
+
+            span {
+                color: #FF6CCE;
+
+                /* Font/Heading 5/Regular */
+                font-family: Inter;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+            }
         }
 
         .content-btn {
@@ -256,7 +268,7 @@
         height: auto;
         position: relative;
         z-index: 5; // 👈 thêm dòng này
-        margin-top: 31px;
+        margin-top: 80px;
 
         img {
             position: absolute;
@@ -269,7 +281,7 @@
         span {
             position: absolute;
             z-index: 2;
-            bottom: 20px; // điều chỉnh vị trí tùy ý
+            bottom: 26px; // điều chỉnh vị trí tùy ý
             left: 50%;
             transform: translateX(-50%);
             font-size: 1.5rem;

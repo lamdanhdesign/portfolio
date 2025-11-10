@@ -73,7 +73,11 @@ const Contact = () => {
         <div className="right-section">
           <div className="thankyou-box">
             <img src={avatar} alt="Avatar" className="avatar-small" />
-            <a href="/path-to-your-cv.pdf" download className="cv-button">
+            <a
+              href="/path-to-your-cv.pdf"
+              download
+              className="cv-button mirror-shine-ultra mirror-shine-touch"
+            >
               <img src={cvIcon} alt="Download" />
               <span> Curriculum Vitae</span>
             </a>

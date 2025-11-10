@@ -1,6 +1,7 @@
 import "../styles/hero.scss";
 import tauBay from "../assets/images/3.png";
 import Header from "./header";
+
 const Hero = () => {
   return (
     <>
@@ -21,7 +22,9 @@ const Hero = () => {
 
                   <div className="porfolio-cv">
                     <img src={tauBay} alt="" />
-                    <div className="btn-my-cv">My CV</div>
+                    <div className="btn-my-cv mirror-shine-ultra mirror-shine-touch">
+                      My CV
+                    </div>{" "}
                   </div>
 
                   <div className="porfolio-text">O</div>

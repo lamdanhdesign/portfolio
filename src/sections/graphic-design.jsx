@@ -64,7 +64,7 @@ const GraphicDesSection = () => {
       <div className="content">
         <div className="content-title">
           <div className="wrap-title">
-            <h2 className="title">Web Design</h2>
+            <h2 className="title">Graphic</h2>
             <p className="subtitle">design</p>
 
             {/* Menu Slog */}

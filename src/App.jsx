@@ -1,5 +1,5 @@
 import Persional from "./sections/persional";
-import "./App.css";
+import "./App.scss";
 import ExpPage from "./sections/exp";
 import General from "./sections/general";
 import Hero from "./sections/hero";
@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <div className="layout">
-        <div>
+        <div className="layout-wrapper">
           <Hero />
           <Persional />
           <ExpPage />
