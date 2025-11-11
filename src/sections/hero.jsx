@@ -1,7 +1,7 @@
 import "../styles/hero.scss";
 import tauBay from "../assets/images/3.png";
 import Header from "./header";
-
+import { motion } from "motion/react";
 const Hero = () => {
   return (
     <>
@@ -21,7 +21,13 @@ const Hero = () => {
                   <div className="porfolio-text">L</div>
 
                   <div className="porfolio-cv">
-                    <img src={tauBay} alt="" />
+                    <motion.img
+                      src={tauBay}
+                      alt="tau bay"
+                      initial={{ y: 50, opacity: 0 }} // bắt đầu thấp hơn và ẩn
+                      animate={{ y: 0, opacity: 1 }} // bay lên và hiện ra
+                      transition={{ duration: 1, ease: "easeOut" }} // hiệu ứng mượt
+                    />
                     <div className="btn-my-cv mirror-shine-ultra mirror-shine-touch">
                       My CV
                     </div>{" "}

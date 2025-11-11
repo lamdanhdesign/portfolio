@@ -24,6 +24,8 @@ const WebsiteSection = () => {
 
   return (
     <section className="website-section">
+      {" "}
+      <div className="background"></div>
       <div className="background-1"></div>
       <div className="content">
         <div className="content-title">

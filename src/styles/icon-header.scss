@@ -1,0 +1,160 @@
+.sidebar-header-icon {
+    position: fixed;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    border-radius: 16px 0 0 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #007dff;
+    border-bottom: 1px solid #007dff;
+    border-left: 1px solid #007dff;
+    background: #000031;
+    z-index: 99999;
+    padding: 12px 0px;
+
+
+    // 🚫 Bỏ transition width (vì motion handle)
+    transition: none;
+
+    .sidebar-toggle {
+        width: 32px;
+        height: 32px;
+        border-radius: 360px;
+        background: #722ed1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover {
+            background: #562edb;
+        }
+    }
+
+    .sidebar-items {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+
+
+        .separator {
+            width: 50px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.3);
+            margin: 4px 0;
+            transition: background 0.3s ease;
+
+            // hiệu ứng sáng nhẹ khi hover sidebar
+            .sidebar-item:hover+& {
+                background: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+        .sidebar-close {
+            align-self: flex-end;
+            width: 32px;
+            height: 32px;
+            border-radius: 360px;
+            background: #722ed1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            margin-right: 7px;
+
+            img {
+                width: 26px;
+                height: 31.21px;
+                transform: rotate(180deg);
+            }
+
+            &:hover {
+                background: #562edb;
+                transform: scale(1.05);
+            }
+        }
+
+        .sidebar-item {
+            position: relative;
+            overflow: visible;
+
+            /* mặc định là visible, tránh cắt */
+            .tooltip {
+
+                overflow: visible;
+                position: absolute;
+                top: 20%;
+                right: 50px;
+                transform: translateY(-50%);
+
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+                z-index: 10000;
+                display: inline-flex;
+                padding: 8px 12px;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                border-radius: 4px;
+                border: 1px solid #FFF;
+                background: linear-gradient(0deg, rgba(255, 255, 255, 0.10) 0%, rgba(255, 255, 255, 0.10) 100%), #000031;
+                color: white;
+                width: 80px;
+                height: 32px;
+                color: #FFF;
+
+                /* Font/Caption/Regular */
+                font-family: Inter;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 16px;
+                /* 133.333% */
+                letter-spacing: 0.048px;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    right: -6px;
+                    transform: translateY(-50%);
+                    border-left: 6px solid #000031;
+                    border-top: 6px solid transparent;
+                    border-bottom: 6px solid transparent;
+                }
+            }
+
+            img {
+                width: 26px;
+                height: 31.21px;
+                aspect-ratio: 26.00/31.21;
+            }
+
+
+        }
+
+        .sidebar-lang {
+            color: var(--Light-Mode-Gray-Scale-0, #FFF);
+
+            /* Font/Subtitle 1/Medium */
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 20px;
+            /* 125% */
+            letter-spacing: 0.2px;
+            padding-bottom: 18px;
+        }
+    }
+}

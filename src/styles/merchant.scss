@@ -39,7 +39,7 @@
         margin: 0 auto 60px auto;
 
         .title {
-            font-size: 3rem;
+
             width: 1004px;
             font-weight: 700;
             margin-bottom: 10px;
@@ -54,7 +54,7 @@
             flex-shrink: 0;
             text-align: center;
             font-family: Inter;
-            font-size: 120px;
+            font-size: 100px;
             font-style: normal;
             font-weight: 700;
             line-height: 52px;
@@ -130,8 +130,8 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); // canh chính giữa
-            width: 320px; // bạn tùy chỉnh lại kích thước ảnh
-            height: auto;
+            width: 276px;
+            height: 557px;
             z-index: 2; // nổi lên trên background
         }
 
@@ -148,23 +148,25 @@
 
         .image-mobile-2 {
             position: absolute;
-            right: 0;
+            right: 25px;
             z-index: 3;
             width: 265px;
             height: 122px;
             flex-shrink: 0;
             aspect-ratio: 265/122;
-            top: 20%;
+            top: 30%;
+
+
         }
 
         .image-mobile-3 {
             position: absolute;
-            right: 0;
+            right: 27px;
             width: 221px;
             height: 216px;
             flex-shrink: 0;
             aspect-ratio: 221/216;
-            bottom: 60px;
+            bottom: 96px;
             z-index: 3;
         }
     }
@@ -193,6 +195,17 @@
             font-size: 1.5rem;
             color: #fff;
             font-weight: 600;
+            color: #FFF;
+            text-align: center;
+
+            /* Font/Heading 4/SemiBold */
+            font-family: Inter;
+            font-size: 34px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            /* 117.647% */
+            letter-spacing: 0.085px;
         }
     }
 }
@@ -288,10 +301,12 @@
         .image-mobile-center {
             position: absolute;
             top: 48%;
-            left: 28%;
+            left: 35%;
             transform: translate(-50%, -50%); // canh chính giữa
-            width: 320px; // bạn tùy chỉnh lại kích thước ảnh
-            height: auto;
+            width: 276px;
+            height: 557px;
+            flex-shrink: 0;
+            aspect-ratio: 276/557;
             z-index: 3; // nổi lên trên background
         }
 
@@ -300,9 +315,11 @@
             top: 60%;
             left: 68%;
             transform: translate(-50%, -50%); // canh chính giữa
-            width: 320px; // bạn tùy chỉnh lại kích thước ảnh
-            height: auto;
-            z-index: 2; // nổi lên trên background
+
+            z-index: 2; // nổi lên trên backgroundwidth: 276px;
+            height: 557px;
+            flex-shrink: 0;
+            aspect-ratio: 276/557;
         }
 
         .image-mobile-1 {
@@ -382,8 +399,12 @@
         max-width: 482px;
         margin-top: -100px;
         height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
 
         .content-text {
+
             li {
                 color: #fff;
                 text-align: left;

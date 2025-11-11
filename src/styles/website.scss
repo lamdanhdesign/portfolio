@@ -9,8 +9,21 @@
     overflow: hidden;
     display: flex;
     justify-content: center;
+    overflow: visible; // cho phép phần cong tràn ra
 
+    .background {
+        width: 100%;
+        height: 952px;
+        flex-shrink: 0;
+        aspect-ratio: 1578/1051;
 
+        background: url('../assets/images/website/Ellipse-website.png') no-repeat;
+
+        position: absolute;
+        z-index: 12;
+        margin-top: -40px;
+
+    }
 
     .background-1 {
         width: 100%;
@@ -28,6 +41,7 @@
     .content {
         max-width: 100%;
         height: auto;
+        margin-top: 60px;
 
         .content-title {
             width: 100%;
