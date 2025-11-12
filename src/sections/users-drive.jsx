@@ -11,7 +11,7 @@ import mobile_4 from "../assets/images/mobile_4.png";
 import Mobile_5 from "../assets/images/mobile_5.png";
 import Mobile_6 from "../assets/images/mobile_6.png";
 import Mobile_7 from "../assets/images/mobile_7.png";
-import backgroundBot from "../assets/images/Vector-organe.png";
+import backgroundBot from "../assets/images/bot-2.svg";
 
 const UsersDriveSection = () => {
   const [isUser, setIsUser] = useState(true);

@@ -1,16 +1,20 @@
 .website-section {
     max-width: 1440px;
     height: auto;
-    background: linear-gradient(180deg, #9554E5 0%, #120030 100%);
+    background: linear-gradient(180deg, #5300BA 0%, #120030 100%);
     color: #fff;
 
     text-align: center;
     position: relative;
-    overflow: hidden;
+
     display: flex;
     justify-content: center;
     overflow: visible; // cho phép phần cong tràn ra
+    // overflow: hidden;
+    z-index: 3;
 
+
+    //ellipse
     .background {
         width: 100%;
         height: 952px;
@@ -23,6 +27,21 @@
         z-index: 12;
         margin-top: -40px;
 
+    }
+
+    .background-ellipse {
+        width: 3850px;
+        height: 1104px;
+        flex-shrink: 0;
+        border-radius: 66%;
+        position: absolute;
+        top: 37%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+        background: transparent;
+        /* border: 1px solid #300072; */
+        background: #5300BA;
     }
 
     .background-1 {
@@ -40,38 +59,52 @@
 
     .content {
         max-width: 100%;
-        height: auto;
+        height: 1285px;
         margin-top: 60px;
+        z-index: 100;
+        background: linear-gradient(180deg, #5300BA 0%, #120030 100%);
 
         .content-title {
             width: 100%;
             display: flex;
             justify-content: center;
+            margin-top: -40px;
 
         }
 
         .wrap-title {
             width: 1004px;
             height: auto;
-
+            display: flex;
+            flex-direction: column; // xếp dọc
+            gap: 24px; // khoảng cách giữa các phần tử con
         }
 
         .title {
-            color: #FFB45E;
-
-            background: linear-gradient(180deg, #FFF -30.77%, rgba(255, 255, 255, 0.00) 215.38%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
             text-align: center;
-            font-family: Inter;
-            font-size: 120px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 140px;
-            /* 43.333% */
-            /* 123.077% */
 
+            .p_1 {
+                font-family: Inter;
+                font-size: 150px;
+                font-weight: 700;
+                line-height: 1.1;
+                margin: 0;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .p_2 {
+                font-family: Inter;
+                font-size: 75px;
+                font-weight: 700;
+                line-height: 1.1;
+                margin-top: -60px;
+                /* Đưa “experience” gần hơn với “Work” */
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
 
         .subtitle {
@@ -107,7 +140,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 32px;
-
+            margin-bottom: 24px;
 
             span {
                 color: #FF6CCE;
@@ -132,6 +165,7 @@
             font-weight: 400;
             line-height: 32px;
             /* 123.077% */
+            margin-bottom: 30px;
 
             span {
                 color: #FF6CCE;
@@ -208,7 +242,7 @@
         margin: 0 auto;
         position: relative; // cần để ảnh con position tuyệt đối
         gap: 50px;
-        margin-top: 30px;
+        margin-top: 40px;
 
         .image-mobile-background {
             width: 674px;
@@ -280,9 +314,10 @@
     .background-bot {
         width: 100%;
         height: auto;
-        position: relative;
+        position: absolute;
         z-index: 5; // 👈 thêm dòng này
-        margin-top: 80px;
+        margin-top: 147px;
+        bottom: 0px;
 
         img {
             position: absolute;
@@ -290,6 +325,12 @@
             bottom: 0; // nếu bạn muốn nó nằm sát dưới
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            width: 246.44px;
+            height: 81.723px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         span {
@@ -298,40 +339,50 @@
             bottom: 26px; // điều chỉnh vị trí tùy ý
             left: 50%;
             transform: translateX(-50%);
-            font-size: 1.5rem;
-            color: #fff;
-            font-weight: 600;
+
+
             color: #FFF;
             text-align: center;
 
-            /* Font/Heading 4/SemiBold */
+            /* Font/Heading 6/SemiBold */
             font-family: Inter;
-            font-size: 34px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 600;
-            line-height: 40px;
-            /* 117.647% */
-            letter-spacing: 0.085px;
+            line-height: 24px;
+            /* 120% */
+            letter-spacing: 0.03px;
         }
     }
 
     .website-swiper {
-        position: relative;
-        max-width: 90%;
-        margin: 0 auto;
-        margin-top: -35px;
-
         .swiper-slide {
             display: flex;
-            flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
+            transition: all 0.3s ease; // mượt khi đổi kích thước/opacity
+            filter: brightness(0.5); // mặc định tối hơn
+            transform: scale(0.85); // mặc định nhỏ hơn
 
-        }
+            &.swiper-slide-active {
+                filter: brightness(1); // slide giữa sáng hơn
+                transform: scale(1.2); // slide giữa to ra
+                width: 599px !important;
+                height: 829px !important;
+                flex-shrink: 0;
+            }
 
-        img {
-            max-width: 100%;
-            height: auto;
+            img {
+                width: 450px;
+                height: 593px;
+                aspect-ratio: 450/593;
+                transition: all 0.3s ease;
+            }
+
+            &.swiper-slide-active img {
+                width: 599px;
+                height: 829px;
+            }
         }
     }
 

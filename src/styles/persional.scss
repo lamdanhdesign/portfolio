@@ -49,15 +49,15 @@
 
 
         img {
-            width: 233.149px;
-            height: 393.248px;
+            width: 312px;
+            height: 434px;
             flex-shrink: 0;
             aspect-ratio: 233.15/393.25;
             mix-blend-mode: lighten;
             position: absolute;
             z-index: 22;
-            top: 21%;
-            left: 37%;
+            top: 20%;
+            left: 33%;
         }
 
     }
@@ -65,8 +65,8 @@
     .background4 {
 
         img {
-            width: 259px;
-            height: 285px;
+            width: 231px;
+            height: 294px;
             flex-shrink: 0;
             aspect-ratio: 151 / 147;
             position: absolute;
@@ -106,7 +106,7 @@
     }
 
     .info_1 {
-        right: 70px;
+        right: 13%;
         position: absolute;
         display: inline-flex;
         transform: rotate(8deg);
@@ -117,6 +117,7 @@
         border-radius: 16px;
         background: linear-gradient(180deg, #D56EFF 0%, #5000BD 100%);
         z-index: 100;
+        top: 22%;
 
         .text {
             display: flex;
@@ -169,7 +170,7 @@
                 /* Font/Body 1/Regular */
                 font-family: Inter;
                 font-size: 16px;
-                font-style: normal;
+                font-style: italic; // 👈 thêm dòng này để chữ nghiêng
                 font-weight: 400;
                 line-height: 24px;
                 /* 150% */
@@ -192,7 +193,7 @@
     }
 
     .info_2 {
-        left: 200px;
+        left: 17%;
         position: absolute;
         display: inline-flex;
         transform: rotate(-8deg);
@@ -203,6 +204,7 @@
         border-radius: 16px;
         background: linear-gradient(180deg, #D56EFF 0%, #5000BD 100%);
         z-index: 100;
+        top: 38%;
 
         .text_2 {
             display: flex;

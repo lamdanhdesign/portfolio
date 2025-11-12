@@ -19,15 +19,9 @@ const MerchantSection = () => {
         <div className="background"></div>
         <div className="background-1"></div>
         <div className="content">
-          <motion.h2
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: false }}
-            transition={{ duration: 2, delay: 0.7 }}
-            className="title"
-          >
-            Mobile App
-          </motion.h2>
+          <div className="title">
+            <p className="p_1">Mobile</p> <p className="p_2">app design</p>
+          </div>
           <p className="subtitle">
             Tối ưu hóa quy trình vận hành cửa hàng bằng nền tảng di động.
           </p>

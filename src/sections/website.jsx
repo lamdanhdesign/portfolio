@@ -5,6 +5,15 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "../styles/website.scss";
 
+// import mobile from "../assets/images/a1.png";
+// import Mobile_1 from "../assets/images/a2.png";
+// import Mobile_2 from "../assets/images/a3.png";
+// import Mobile_3 from "../assets/images/a4.png";
+// import mobile_4 from "../assets/images/a5.png";
+// import Mobile_5 from "../assets/images/a6.png";
+// import backgroundBot from "../assets/images/bot-2.svg";
+// import backgroundBotGreen from "../assets/images/bot-2.svg";
+
 import mobile from "../assets/images/web_1.png";
 import Mobile_1 from "../assets/images/web_2.png";
 import Mobile_2 from "../assets/images/web_3.png";
@@ -13,7 +22,7 @@ import mobile_4 from "../assets/images/web_5.png";
 import Mobile_5 from "../assets/images/web_6.png";
 import backgroundBot from "../assets/images/Vector-organe.png";
 import backgroundBotGreen from "../assets/images/bot-2green.png";
-
+import backgroundTim from "../assets/images/bot-2.svg";
 const WebsiteSection = () => {
   const [isUser, setIsUser] = useState(true);
 
@@ -25,13 +34,16 @@ const WebsiteSection = () => {
   return (
     <section className="website-section">
       {" "}
-      <div className="background"></div>
+      {/* <div className="background"></div> */}
+      <div className="background-ellipse"></div>
       <div className="background-1"></div>
       <div className="content">
         <div className="content-title">
           <div className="wrap-title">
             {" "}
-            <h2 className="title">Web Design</h2>
+            <div className="title">
+              <p className="p_1">Website</p> <p className="p_2">design</p>
+            </div>
             {isUser ? (
               <>
                 <p className="subtitle">Cầu nối giữa Ứng dụng và Cộng đồng</p>
@@ -58,8 +70,7 @@ const WebsiteSection = () => {
             )}
           </div>
         </div>
-
-        {/* Swiper */}
+        {/* 
         <Swiper
           modules={[Navigation]}
           navigation={{
@@ -70,7 +81,6 @@ const WebsiteSection = () => {
           onSlideChange={handleSlideChange}
           className="website-swiper"
         >
-          {/* Slide 1: User */}
           <SwiperSlide>
             <div className="image-mobile">
               <img
@@ -87,7 +97,6 @@ const WebsiteSection = () => {
             </div>
           </SwiperSlide>
 
-          {/* Slide 2: E-commerce */}
           <SwiperSlide>
             <div className="image-mobile-2">
               <img src={Mobile_3} alt="App mockup" className="image-mobile-3" />
@@ -103,8 +112,31 @@ const WebsiteSection = () => {
               <span>Website E-commerce</span>
             </div>
           </SwiperSlide>
+        </Swiper> */}
+        <Swiper
+          modules={[Navigation]}
+          navigation={{
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          }}
+          slidesPerView={3} // hiển thị 3 ảnh, trung tâm nổi bật
+          centeredSlides={true} // slide giữa sẽ được center
+          spaceBetween={30} // khoảng cách giữa các ảnh
+          onSlideChange={handleSlideChange}
+          className="website-swiper"
+        >
+          {[Mobile_1, mobile, Mobile_2, Mobile_3, mobile_4, Mobile_5].map(
+            (imgSrc, index) => (
+              <SwiperSlide key={index}>
+                <img src={imgSrc} alt={`App ${index}`} />
+              </SwiperSlide>
+            )
+          )}{" "}
         </Swiper>
-
+        <div className="background-bot">
+          <img src={backgroundTim} alt="" />
+          <span>Website E-commerce</span>
+        </div>
         {/* Navigation buttons */}
         <div className="swiper-button-prev custom-nav-btn">{""}</div>
         <div className="swiper-button-next custom-nav-btn">{""}</div>

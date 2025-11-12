@@ -39,30 +39,30 @@
         margin: 0 auto 60px auto;
 
         .title {
-
-            width: 1004px;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #b884ff, #f7a9ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            display: flex;
-
-            height: 108px;
-            flex-direction: column;
-            justify-content: center;
-            flex-shrink: 0;
             text-align: center;
-            font-family: Inter;
-            font-size: 100px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 52px;
-            /* 43.333% */
-            background: linear-gradient(180deg, #FFF -30.77%, rgba(255, 255, 255, 0.00) 215.38%);
-            background-clip: text;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+            .p_1 {
+                font-family: Inter;
+                font-size: 150px;
+                font-weight: 700;
+                line-height: 1.1;
+                margin: 0;
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .p_2 {
+                font-family: Inter;
+                font-size: 75px;
+                font-weight: 700;
+                line-height: 1.1;
+                margin-top: -60px;
+                /* Đưa “experience” gần hơn với “Work” */
+                background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.7) 40%, rgba(255, 255, 255, 0) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
         }
 
         .subtitle {
@@ -74,6 +74,8 @@
             font-weight: 400;
             line-height: 32px;
             /* 123.077% */
+            margin-top: 24px;
+            margin-bottom: 24px;
         }
 
         .desc {
@@ -106,15 +108,14 @@
     .image-mobile {
 
         width: 674px;
-        height: 674px;
+        height: 637px;
         flex-shrink: 0;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 0 auto;
-        position: relative; // cần để ảnh con position tuyệt đối
-
-        margin-top: 30px;
+        position: relative;
+        margin-top: -18px;
 
         .image-mobile-background {
             width: 674px;
@@ -130,43 +131,43 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%); // canh chính giữa
-            width: 276px;
-            height: 557px;
+            width: 245.772px;
+            height: 495.695px;
             z-index: 2; // nổi lên trên background
         }
 
         .image-mobile-1 {
             position: absolute;
-            left: 0;
+            left: 43px;
             z-index: 3;
             width: 251px;
             height: 122px;
             flex-shrink: 0;
-            aspect-ratio: 251/122;
-            top: 48%;
+            aspect-ratio: 251 / 122;
+            top: 42%;
         }
 
         .image-mobile-2 {
             position: absolute;
-            right: 25px;
+            right: 96px;
             z-index: 3;
-            width: 265px;
-            height: 122px;
+            width: 223.799px;
+            height: 76px;
             flex-shrink: 0;
-            aspect-ratio: 265/122;
-            top: 30%;
+            aspect-ratio: 223.8 / 76;
+            top: 37%;
 
 
         }
 
         .image-mobile-3 {
             position: absolute;
-            right: 27px;
-            width: 221px;
-            height: 216px;
+            right: 53px;
+            width: 196.864px;
+            height: 192.16px;
             flex-shrink: 0;
-            aspect-ratio: 221/216;
-            bottom: 96px;
+            aspect-ratio: 196.86 / 192.16;
+            bottom: 93px;
             z-index: 3;
         }
     }
@@ -176,14 +177,20 @@
         height: auto;
         position: relative;
         z-index: 5; // 👈 thêm dòng này
-        margin-top: 100px;
+        margin-top: 83px;
 
         img {
             position: absolute;
             z-index: 1;
-            bottom: 0; // nếu bạn muốn nó nằm sát dưới
+            bottom: 24px;
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            width: 246.44px;
+            height: 44.723px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
         }
 
         span {
@@ -192,27 +199,27 @@
             bottom: 30px; // điều chỉnh vị trí tùy ý
             left: 50%;
             transform: translateX(-50%);
-            font-size: 1.5rem;
-            color: #fff;
-            font-weight: 600;
+
+
             color: #FFF;
             text-align: center;
 
-            /* Font/Heading 4/SemiBold */
+
+            /* Font/Heading 6/SemiBold */
             font-family: Inter;
-            font-size: 34px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 600;
-            line-height: 40px;
-            /* 117.647% */
-            letter-spacing: 0.085px;
+            line-height: 31px;
+            /* 120% */
+            letter-spacing: 0.03px;
         }
     }
 }
 
 .mobile-app-section-2 {
     max-width: 1440px;
-    height: 1000px;
+    height: 1109px;
     background: linear-gradient(180deg, #572B8F -8.94%, #120030 107.08%);
     color: #fff;
 
@@ -250,8 +257,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 1045px;
-        margin: 0 auto 60px auto;
+        width: 1216px;
+        margin: 0 auto 225px auto;
+        gap: 32px;
 
         .title {
             font-size: 3rem;
@@ -278,7 +286,7 @@
 
     .image-mobile {
 
-        width: 674px;
+        width: 45%;
         height: 674px;
         flex-shrink: 0;
         display: flex;
@@ -357,11 +365,14 @@
     }
 
     .background-bot {
-        width: 65%;
-        height: auto;
+
         position: relative;
         z-index: 5; // 👈 thêm dòng này
-        margin-top: 100px;
+
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         img {
             position: absolute;
@@ -369,39 +380,49 @@
             bottom: 0; // nếu bạn muốn nó nằm sát dưới
             left: 50%;
             transform: translateX(-50%);
+            display: flex;
+            width: 246.44px;
+            height: 44.723px;
+            flex-direction: column;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 50px;
         }
 
         span {
             width: 100%;
             position: absolute;
             z-index: 2;
-            bottom: 25px; // điều chỉnh vị trí tùy ý
+            bottom: 3px;
             left: 50%;
             transform: translateX(-50%);
-            font-size: 1.5rem;
+
             color: #fff;
-            font-weight: 600;
-            color: #FFF;
+
             text-align: center;
 
-            /* Font/Heading 4/SemiBold */
+
+
+
+            /* Font/Heading 6/SemiBold */
             font-family: Inter;
-            font-size: 34px;
+            font-size: 20px;
             font-style: normal;
             font-weight: 600;
-            line-height: 40px;
-            /* 117.647% */
-            letter-spacing: 0.085px;
+            line-height: 37px;
+            /* 120% */
+            letter-spacing: 0.03px;
         }
     }
 
     .content-wrap {
-        max-width: 482px;
-        margin-top: -100px;
+        max-width: 53%;
+        margin-top: 110px;
         height: auto;
         display: flex;
         flex-direction: column;
-        gap: 12px;
+        gap: 52px;
+        height: 553px;
 
         .content-text {
 
@@ -441,8 +462,8 @@
         gap: 24px;
 
         img {
-            width: 52px;
-            height: 52px;
+            width: 36px;
+            height: 36px;
             transform: rotate(-90deg);
             flex-shrink: 0;
             aspect-ratio: 1/1;
@@ -450,12 +471,13 @@
     }
 
     .background-phi-hanh-gia {
-        right: 6%;
-        bottom: 0;
+        right: 45%;
+        bottom: 90px;
         position: absolute;
-        width: 250px;
-        height: 214px;
+        width: 127px;
+        height: 110px;
         flex-shrink: 0;
-        aspect-ratio: 125/107;
+        aspect-ratio: 127 / 110;
+
     }
 }
