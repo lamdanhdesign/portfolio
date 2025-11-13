@@ -55,7 +55,8 @@ const WebsiteSection = () => {
 
     if (activeGroup === "xe") {
       // Từ nhóm xe → nhảy sang nhóm ecommerce, slide 4 ở giữa → activeIndex = 4
-      swiper.slideTo(4);
+      swiper.slideTo(4, 1000); // thời gian chuyển 1 giây
+
       setActiveGroup("ecommerce");
     }
   };
@@ -66,7 +67,8 @@ const WebsiteSection = () => {
 
     if (activeGroup === "ecommerce") {
       // Từ nhóm ecommerce → nhảy về nhóm xe, slide 1 ở giữa → activeIndex = 1
-      swiper.slideTo(1);
+      swiper.slideTo(1, 1000); // thời gian chuyển 1 giây
+
       setActiveGroup("xe");
     }
   };
