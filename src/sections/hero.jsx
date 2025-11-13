@@ -55,9 +55,9 @@ const Hero = () => {
                       <motion.img
                         src={tauBay}
                         alt="tau bay"
-                        initial={{ y: 50, opacity: 0 }} // bắt đầu thấp hơn và ẩn
-                        animate={{ y: 0, opacity: 1 }} // bay lên và hiện ra
-                        transition={{ duration: 1, ease: "easeOut" }} // hiệu ứng mượt
+                        initial={{ y: 90, opacity: 0, scale: 0.5 }} // bắt đầu thấp hơn, ẩn và nhỏ
+                        animate={{ y: 0, opacity: 1, scale: 1 }} // bay lên, hiện ra và phóng to
+                        transition={{ duration: 2, ease: "easeOut" }} // hiệu ứng mượt
                       />
                       <div className="btn-my-cv mirror-shine-ultra mirror-shine-touch">
                         My CV

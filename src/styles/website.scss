@@ -35,7 +35,7 @@
         flex-shrink: 0;
         border-radius: 66%;
         position: absolute;
-        top: 37%;
+        top: 33%;
         left: 50%;
         transform: translate(-50%, -50%);
         z-index: 1;
@@ -59,7 +59,7 @@
 
     .content {
         max-width: 100%;
-        height: 1285px;
+        height: 1450px;
         margin-top: 60px;
         z-index: 100;
         background: linear-gradient(180deg, #5300BA 0%, #120030 100%);
@@ -140,7 +140,7 @@
             font-style: normal;
             font-weight: 400;
             line-height: 32px;
-            margin-bottom: 24px;
+            margin-bottom: 130px;
 
             span {
                 color: #FF6CCE;
@@ -165,7 +165,7 @@
             font-weight: 400;
             line-height: 32px;
             /* 123.077% */
-            margin-bottom: 30px;
+            margin-bottom: 130px;
 
             span {
                 color: #FF6CCE;
@@ -355,37 +355,70 @@
         }
     }
 
+    .swiper {
+        overflow: visible !important;
+    }
+
     .website-swiper {
         .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
-            transition: all 0.3s ease; // mượt khi đổi kích thước/opacity
-            filter: brightness(0.5); // mặc định tối hơn
-            transform: scale(0.85); // mặc định nhỏ hơn
-
-            &.swiper-slide-active {
-                filter: brightness(1); // slide giữa sáng hơn
-                transform: scale(1.2); // slide giữa to ra
-                width: 599px !important;
-                height: 829px !important;
-                flex-shrink: 0;
-            }
+            transition: all 0.3s ease;
+            filter: brightness(0.5);
+            transform: scale(0.85);
+            overflow: visible;
+            /* Mở lại để ảnh lớn không bị cắt */
 
             img {
                 width: 450px;
                 height: 593px;
-                aspect-ratio: 450/593;
+
+                border-radius: 16px;
                 transition: all 0.3s ease;
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             }
 
-            &.swiper-slide-active img {
-                width: 599px;
-                height: 829px;
+            /* Chỉ ẩn overflow ở slide nhỏ (trái/phải) */
+            &.swiper-slide-prev,
+            &.swiper-slide-next {
+                overflow: hidden;
+            }
+
+            /* Slide giữa: mở overflow + scale */
+            &.swiper-slide-active {
+                filter: brightness(1);
+                transform: scale(1.2);
+                z-index: 10;
+                overflow: visible;
+
+                img {
+                    width: 599px;
+                    height: 829px;
+                }
+            }
+
+            /* Slide nhỏ: scale nhỏ + dịch lên trên */
+            &.swiper-slide-prev,
+            &.swiper-slide-next {
+                transform: scale(0.75) translateY(-40px);
+                /* Thay margin-top bằng translateY */
+                cursor: pointer;
+            }
+
+            /* Nâng slide trái/phải */
+            &.swiper-slide-prev,
+            &.swiper-slide-next {
+                margin-top: 80px;
+                cursor: pointer;
+
+            }
+
+            &.swiper-slide-active {
+                margin-top: 0;
             }
         }
     }
-
 
 
     /* 1. ẨN MŨI TÊN MẶC ĐỊNH CỦA SWIPER */
@@ -480,4 +513,24 @@
     .swiper-button-disabled {
         display: none;
     }
+}
+
+.website-swiper .swiper-slide-prev,
+.website-swiper .swiper-slide-next {
+    margin-top: 80px;
+    transition: margin-top 0.3s ease;
+}
+
+.website-swiper .swiper-slide-active {
+    margin-top: 0;
+    /* Giữ nguyên vị trí cho slide trung tâm */
+    transition: margin-top 0.3s ease;
+}
+
+/* ẨN NÚT KHI CẦN */
+.custom-nav-btn.hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
 }
