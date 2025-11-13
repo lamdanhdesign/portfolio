@@ -69,7 +69,7 @@
             color: #FFB45E;
             text-align: center;
             font-family: Inter;
-            font-size: 26px;
+            font-size: 20px;
             font-style: italic;
             font-weight: 400;
             line-height: 32px;
@@ -377,12 +377,12 @@
         img {
             position: absolute;
             z-index: 1;
-            bottom: 0; // nếu bạn muốn nó nằm sát dưới
+            bottom: -7px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
             width: 246.44px;
-            height: 44.723px;
+            height: 58.723px;
             flex-direction: column;
             justify-content: center;
             flex-shrink: 0;
@@ -406,7 +406,7 @@
 
             /* Font/Heading 6/SemiBold */
             font-family: Inter;
-            font-size: 20px;
+            font-size: 22px;
             font-style: normal;
             font-weight: 600;
             line-height: 37px;
@@ -472,7 +472,7 @@
 
     .background-phi-hanh-gia {
         right: 45%;
-        bottom: 90px;
+        bottom: 145px;
         position: absolute;
         width: 127px;
         height: 110px;

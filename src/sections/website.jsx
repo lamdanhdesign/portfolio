@@ -26,10 +26,19 @@ import backgroundTim from "../assets/images/bot-2.svg";
 const WebsiteSection = () => {
   const [isUser, setIsUser] = useState(true);
 
+  const [activeGroup, setActiveGroup] = useState("xe"); // mặc định nhóm đầu
+
   const handleSlideChange = (swiper) => {
-    // Nếu đang ở slide 0 => user view, slide 1 => ecommerce view
-    setIsUser(swiper.activeIndex === 0);
+    const index = swiper.activeIndex;
+    // Nếu slide đang ở 0–2 → Website đặt xe, còn 3–5 → Website E-commerce
+    if (index <= 2) {
+      setActiveGroup("xe");
+    } else {
+      setActiveGroup("ecommerce");
+    }
   };
+
+  const images = [Mobile_1, mobile, Mobile_2, Mobile_3, mobile_4, Mobile_5];
 
   return (
     <section className="website-section">
@@ -119,24 +128,31 @@ const WebsiteSection = () => {
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           }}
-          slidesPerView={3} // hiển thị 3 ảnh, trung tâm nổi bật
-          centeredSlides={true} // slide giữa sẽ được center
-          spaceBetween={30} // khoảng cách giữa các ảnh
+          slidesPerView={3}
+          centeredSlides={true}
+          spaceBetween={30}
           onSlideChange={handleSlideChange}
           className="website-swiper"
         >
-          {[Mobile_1, mobile, Mobile_2, Mobile_3, mobile_4, Mobile_5].map(
-            (imgSrc, index) => (
-              <SwiperSlide key={index}>
-                <img src={imgSrc} alt={`App ${index}`} />
-              </SwiperSlide>
-            )
-          )}{" "}
+          {images.map((imgSrc, index) => (
+            <SwiperSlide key={index}>
+              <img src={imgSrc} alt={`App ${index}`} />
+            </SwiperSlide>
+          ))}
         </Swiper>
-        <div className="background-bot">
-          <img src={backgroundTim} alt="" />
-          <span>Website E-commerce</span>
-        </div>
+
+        {/* Hiển thị background tương ứng */}
+        {activeGroup === "xe" ? (
+          <div className="background-bot">
+            <img src={backgroundTim} alt="" />
+            <span>Website đặt xe</span>
+          </div>
+        ) : (
+          <div className="background-bot">
+            <img src={backgroundTim} alt="" />
+            <span>Website E-commerce</span>
+          </div>
+        )}
         {/* Navigation buttons */}
         <div className="swiper-button-prev custom-nav-btn">{""}</div>
         <div className="swiper-button-next custom-nav-btn">{""}</div>
