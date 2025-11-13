@@ -57,7 +57,7 @@ const Hero = () => {
                         alt="tau bay"
                         initial={{ y: 90, opacity: 0, scale: 0.5 }} // bắt đầu thấp hơn, ẩn và nhỏ
                         animate={{ y: 0, opacity: 1, scale: 1 }} // bay lên, hiện ra và phóng to
-                        transition={{ duration: 2, ease: "easeOut" }} // hiệu ứng mượt
+                        transition={{ duration: 2.4, ease: "easeOut" }} // hiệu ứng mượt
                       />
                       <div className="btn-my-cv mirror-shine-ultra mirror-shine-touch">
                         My CV
