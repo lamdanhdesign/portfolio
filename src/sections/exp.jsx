@@ -32,7 +32,7 @@ const ExpPage = () => {
 
   return (
     <>
-      <div className="exp">
+      <div className="exp" id="skill">
         <div className="exp-background">
           <div className="exp-background-color"></div>
           <div className="exp-background-color-1-ellipse"></div>

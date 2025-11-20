@@ -13,13 +13,18 @@ const HeaderSidebar = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
   const items = [
-    { icon: Rocket1, title: "About me" },
-    { icon: Rocket2, title: "Skill" },
-    { icon: Rocket3, title: "Project" },
-    { icon: Rocket4, title: "Contact" },
+    { icon: Rocket1, title: "About me", target: "about-me" },
+    { icon: Rocket2, title: "Skill", target: "skill" },
+    { icon: Rocket3, title: "Project", target: "project" },
+    { icon: Rocket4, title: "Contact", target: "contact" }, // ✅
   ];
+  const handleScroll = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
-  console.log("hoveredIndex", hoveredIndex);
   return (
     <motion.div
       className="sidebar-header-icon"
@@ -68,12 +73,16 @@ const HeaderSidebar = () => {
             {items.map((item, index) => (
               <React.Fragment key={index}>
                 <motion.div
+                  style={{ cursor: "pointer" }}
                   className="sidebar-item"
                   onMouseEnter={() => setHoveredIndex(index)}
                   onMouseLeave={() => setHoveredIndex(null)}
                   initial={{ opacity: 0, x: 10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
+                  onClick={() => {
+                    handleScroll(item.target);
+                  }}
                 >
                   <img src={item.icon} alt={item.title} className="icon" />
 

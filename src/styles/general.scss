@@ -1,10 +1,20 @@
 .general {
-    height: 1010px;
+    height: auto; // 👈 sửa
+    min-height: 1010px; // 👈 thay height thành min-height
     width: 100%;
     align-self: stretch;
     background: linear-gradient(0deg, #9B6DD4 -4.1%, #723FB3 55.53%, #120030 106.01%);
     position: relative;
     margin-top: -20px;
+
+    @media (min-width: 1441px) {
+        min-height: 1010px; // 👈 giờ mới có hiệu lực
+    }
+
+    @media (min-width: 2560px) {
+        min-height: 1010px; // 👈 nếu muốn cho màn 2K/4K
+    }
+
 
     .general-background {
         width: 100%;
@@ -96,8 +106,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        max-width: 1440px;
-        height: 947px;
+        width: 100vw;
+        height: auto;
+        min-height: 947px;
         padding-top: 90px;
         position: relative;
         z-index: 9999;
@@ -105,7 +116,10 @@
         img {
             width: 90%;
             height: 90%;
-            aspect-ratio: 248/129;
+            margin-top: 62px;
+
+
+
         }
     }
 

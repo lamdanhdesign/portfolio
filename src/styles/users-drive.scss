@@ -1,28 +1,38 @@
 .users-drive-section {
-    max-width: 1440px;
-    height: auto;
+    /* 1. BỎ cứng 1440px → tràn full width */
+    width: 100%;
+    min-height: 1046px; // hoặc để auto nếu nội dung tự đẩy cao
+
     background: linear-gradient(0deg, #572B8F -8.44%, #120030 91.44%);
     color: #fff;
-
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; // cực kỳ quan trọng để cắt phần thừa của background
+
     display: flex;
     justify-content: center;
+    align-items: flex-start; // hoặc center tùy bạn muốn nội dung ở giữa
 
     z-index: 2;
 
+    /* 2. Background overlay lớn – tràn full, không repeat, không méo */
     .background-1 {
-        width: 100%;
-        height: 1046px;
-        flex-shrink: 0;
-        aspect-ratio: 1578/1051;
-        opacity: 0.25;
-        background: url('../assets/images/b6e7555227a3c18a46cddd624d0f77bb3afa2dbd.png') no-repeat;
-        mix-blend-mode: luminosity;
         position: absolute;
+        top: 0;
+        left: 0;
 
+        width: 100%;
+        height: 100%; // full theo section
+
+        background: url('../assets/images/b6e7555227a3c18a46cddd624d0f77bb3afa2dbd.png') center center / cover no-repeat;
+
+        opacity: 0.25;
+        mix-blend-mode: luminosity;
+        pointer-events: none;
+        z-index: 1;
     }
+
+
 
     .content {
 
@@ -261,7 +271,7 @@
         position: relative;
         z-index: 5; // 👈 thêm dòng này
         margin-top: 9px;
-        bottom: 20px;
+        bottom: -30px;
         margin-bottom: 74px;
 
         img {

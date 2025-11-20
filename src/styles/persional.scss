@@ -1,49 +1,87 @@
 .personal-info {
-    // height: 1290px;
-    align-self: stretch;
+    // Bỏ width cố định 1440px
+    width: 100%; // Quan trọng nhất
+    min-height: 1290px; // dùng min-height thay height để responsive
+    padding-top: 0;
     position: relative;
-    width: 1440px;
-    padding-top: 0px;
     z-index: 13;
+    overflow: hidden; // rất quan trọng để cắt bớt phần thừa của background2
 
+    // Gradient nền tràn full
     background: linear-gradient(0deg, #3D0086 0%, #120030 135.7%);
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 1290px;
 
+    // 1. Background top (hình trang trí ở trên cùng)
     .background-top {
-        max-width: 1440px;
-        height: 538px;
-        flex-shrink: 0;
-        aspect-ratio: 1441/538;
         position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; // tràn full viewport
+        max-width: none;
+        height: auto;
+        min-height: 200px;
         z-index: 20;
-        top: 4px;
-        background: url('../assets/images/freepik192-03-Revise-04 pts 2.png') no-repeat;
+
+        background: url('../assets/images/freepik192-03-Revise-04\ pts\ 2.png') center top / cover no-repeat; // cover = tràn đẹp, không méo
+
+        @media (min-width: 1441px) {
+            min-height: 269px;
+
+        }
+
+
     }
 
+    // 2. Vòng tròn gradient tím (giữ nguyên vị trí tương đối)
     .background {
         width: 658px;
         height: 658px;
-        flex-shrink: 0;
-        border-radius: 658px;
-        background: radial-gradient(50% 50% at 50% 50%, #8300B8 0%, rgba(131, 0, 184, 0.00) 100%);
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%, #8300B8 0%, rgba(131, 0, 184, 0) 100%);
         position: absolute;
         z-index: 9;
-
-
+        // bạn có thể căn vị trí bằng left/top tùy ý, ví dụ:
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
     }
 
-
+    // 3. Background overlay lớn nhất (hình nghệ thuật tím)
     .background2 {
-        width: 100%;
-        height: 1083px;
-        flex-shrink: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw; // tràn full viewport width
+        height: auto;
+        min-height: 1083px;
+        max-width: none;
         aspect-ratio: 1726/1083;
         mix-blend-mode: screen;
-        background: url('../assets/images/2569567-02 1.png');
+        pointer-events: none; // để không chặn click
+        z-index: 10;
+
+        background: url('../assets/images/2569567-02\ 1.png') center center / contain no-repeat;
+        // hoặc dùng cover nếu bạn muốn nó che kín hơn:
+        // background: url(...) center center / cover no-repeat;
     }
+
+    // Nội dung chính của bạn (text, avatar, v.v.) nên bọc trong 1 div có max-width
+    .personal-info__content {
+        position: relative;
+        z-index: 25;
+        width: 100%;
+        max-width: 1440px;
+        padding: 0 40px;
+        box-sizing: border-box;
+        text-align: center;
+        // thêm nội dung ở đây
+    }
+
 
     .background3 {
 
@@ -254,17 +292,34 @@
     }
 
     .subtract {
-        background: url('../assets/images/Subtract.png') no-repeat;
-        width: 100%;
-        height: 741px;
         position: absolute;
-        z-index: 11;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; // luôn full viewport width
+        min-height: 741px;
         bottom: -25%;
+        z-index: 11;
+        pointer-events: none; // không chặn click
+        overflow: hidden;
+
         display: flex;
         justify-content: center;
-
-        padding: 20px 0px;
+        align-items: flex-start;
+        padding: 20px 0;
         gap: 12px;
+
+        // Hình nền Subtract.png – responsive hoàn hảo
+        background: url('../assets/images/Subtract.png') center bottom no-repeat;
+
+        // Mặc định (mobile & màn nhỏ): giữ nguyên tỷ lệ, không bị méo, căn giữa
+        background-size: contain; // hoặc auto nếu bạn muốn giữ đúng px
+
+        // Từ 1441px trở lên: tràn full width, giữ nguyên tỷ lệ, không méo
+        @media (min-width: 1441px) {
+            background-size: 100vw auto; // width = 100vw, height tự tính → KHÔNG MÉO
+            // hoặc nếu bạn thích cắt nhẹ 2 bên cho "hoành tráng" hơn:
+            // background-size: cover;
+        }
 
         .poster_1 {
             width: 292px;

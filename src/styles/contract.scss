@@ -1,6 +1,6 @@
 .thankyou-wrapper {
     position: relative;
-    max-width: 1440px;
+    max-width: 100%;
 
     background: #fff;
 
@@ -240,5 +240,139 @@
 
     .thankyou-box h2 {
         font-size: 36px;
+    }
+}
+
+// Toast Xanh Lá Siêu Nét - Không Glassmorphism (Flat & Clean)
+.copy-toast {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    left: auto;
+    background: linear-gradient(135deg, #00a8ff, #00d084);
+
+    border-radius: 18px;
+    padding: 16px 26px;
+    box-shadow:
+        0 10px 30px rgba(0, 214, 143, 0.3),
+        0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-80px) scale(0.92);
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    min-width: 300px;
+    max-width: 380px;
+    font-family: inherit;
+    overflow: hidden;
+    border: none;
+    color: white;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0) scale(1);
+    }
+
+    .toast-content {
+        display: flex;
+        align-items: center;
+        gap: 13px;
+        color: white;
+        font-weight: 600;
+        font-size: 15.5px;
+    }
+
+    .toast-icon {
+        font-size: 24px;
+        color: white;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+        animation: tickBounce 0.7s ease-out;
+    }
+
+    .toast-text {
+        font-weight: 700;
+        letter-spacing: 0.4px;
+        color: white;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    }
+
+    // Thanh progress xanh lá sáng hơn một chút để nổi bật
+    .toast-progress {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 4px;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.15);
+        border-radius: 0 0 18px 18px;
+        overflow: hidden;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background: #69f0ae;
+            box-shadow: 0 0 12px rgba(105, 240, 174, 0.8);
+            animation: toastProgress 2.4s linear forwards;
+        }
+    }
+}
+
+// Hiệu ứng icon check nhún cực chất
+@keyframes tickBounce {
+
+    0%,
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    40% {
+        transform: scale(1.4) rotate(-12deg);
+    }
+
+    70% {
+        transform: scale(1.2) rotate(10deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
+}
+
+@keyframes toastProgress {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+// Mobile: căn giữa trên cùng
+@media (max-width: 768px) {
+    .copy-toast {
+        top: 20px;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%) translateY(-100px) scale(0.92);
+        min-width: auto;
+        max-width: 90%;
+        padding: 15px 22px;
+        border-radius: 16px;
+
+        &.show {
+            transform: translateX(-50%) translateY(0) scale(1);
+        }
+
+        .toast-content {
+            justify-content: center;
+            font-size: 15px;
+            gap: 11px;
+        }
     }
 }

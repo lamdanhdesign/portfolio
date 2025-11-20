@@ -43,10 +43,15 @@ const UsersDriveSection = () => {
             </p>
           )}
           <div className="content-btn">
-            <button className="btn-user" onClick={() => handleOnChange(true)}>
+            <button
+              className="btn-user"
+              style={{ cursor: "pointer" }}
+              onClick={() => handleOnChange(true)}
+            >
               User
             </button>{" "}
             <button
+              style={{ cursor: "pointer" }}
               onClick={() => handleOnChange(false)}
               className="btn-driver"
             >

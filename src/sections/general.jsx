@@ -4,7 +4,7 @@ import vien2 from "../assets/images/Vector 2.png";
 const General = () => {
   return (
     <>
-      <div className="general">
+      <div className="general" id="project">
         <div className="general-background">
           <div className="background_1"></div>
           <div className="background_2"></div>

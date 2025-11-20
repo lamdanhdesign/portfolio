@@ -1,38 +1,59 @@
 .mobile-app-section {
-    max-width: 1440px;
-    height: 1041px;
+    // BỎ max-width 1440px → cho tràn full
+    width: 100%;
+    min-height: 1041px; // dùng min-height thay height cố định
+    padding-top: 80px;
+    padding-bottom: 100px; // thêm chút padding dưới cho đẹp
+
     background: linear-gradient(180deg, #572B8F -8.94%, #120030 107.08%);
     color: #fff;
-
     text-align: center;
     position: relative;
-    overflow: hidden;
+    overflow: hidden; // cực kỳ quan trọng để cắt phần thừa của background
+
     display: flex;
     justify-content: center;
-    padding-top: 80px;
+    align-items: flex-start; // hoặc center tùy bạn muốn nội dung ở giữa hay trên
 
-
+    // 1. Vector trang trí ở trên cùng (Vector 3.png)
     .background {
-        width: 1444.5px;
-        height: 146px;
-        flex-shrink: 0;
         position: absolute;
-        z-index: 13;
         top: 0;
-        background: url('../assets/images/Vector 3.png') no-repeat;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100vw; // tràn full viewport
+        height: auto;
+        min-height: 146px;
+        max-width: none;
+        z-index: 13;
+
+        background: url('../assets/images/Vector 3.png') center top / cover no-repeat;
+        // hoặc nếu bạn muốn giữ nguyên tỷ lệ và thấy toàn bộ vector:
+        // background: url(...) center top / contain no-repeat;
     }
 
+    // 2. Background overlay lớn (hình 6538478-01 2.png)
     .background-1 {
-        width: 100%;
-        height: 100%;
-        flex-shrink: 0;
-        aspect-ratio: 1578/1051;
-        opacity: 0.25;
-        background: url('../assets/images/6538478-01 2.png') no-repeat;
-        mix-blend-mode: luminosity;
         position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100vw; // tràn full width
+        height: 100%;
+        min-height: 1051px;
+        max-width: none;
+
+        opacity: 0.25;
+        mix-blend-mode: luminosity;
+        pointer-events: none; // không chặn click
         z-index: 12;
+
+        background: url('../assets/images/6538478-01\ 2.png') center center / cover no-repeat;
+
     }
+
+
+
 
     .content {
         width: 1004px;
@@ -40,6 +61,10 @@
 
         .title {
             text-align: center;
+
+            @media (min-width: 1441px) {
+                margin-top: 40px;
+            }
 
             .p_1 {
                 font-family: Inter;
@@ -175,9 +200,10 @@
     .background-bot {
         width: 100%;
         height: auto;
-        position: relative;
-        z-index: 5; // 👈 thêm dòng này
-        margin-top: 83px;
+        position: absolute;
+        z-index: 5;
+        bottom: 100px;
+        left: 0%;
 
         img {
             position: absolute;
@@ -218,7 +244,7 @@
 }
 
 .mobile-app-section-2 {
-    max-width: 1440px;
+    width: 100%;
     height: 1109px;
     background: linear-gradient(180deg, #572B8F -8.94%, #120030 107.08%);
     color: #fff;
@@ -232,16 +258,17 @@
 
 
     .background {
-        width: 1444.5px;
+        width: 100%;
         height: 146px;
         flex-shrink: 0;
         position: absolute;
         z-index: 13;
         top: 0;
-        background: url('../assets/images/Vector 3.png') no-repeat;
+        background: url('../assets/images/Vector 3.png') center top / cover no-repeat;
     }
 
     .background-1 {
+        background: url('../assets/images/6538478-01\ 2.png') center center / cover no-repeat;
         width: 100%;
         height: 100%;
         flex-shrink: 0;
@@ -268,6 +295,10 @@
             background: linear-gradient(90deg, #b884ff, #f7a9ff);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+
+            @media (min-width: 1441px) {
+                margin-top: 40px;
+            }
         }
 
         .subtitle {

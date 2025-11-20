@@ -4,30 +4,76 @@
 
     .hero-section {
         width: 100%;
-        height: 832px;
+        min-height: 832px;
         justify-content: center;
     }
 
     .hero-container {
-        background: rgb(243, 197, 197);
-        height: 100%;
-        max-width: 1440px;
+        width: 100%;
+        min-height: 832px; // dùng min-height thay height để responsive tốt hơn
         padding-top: 104px;
         display: flex;
         justify-content: center;
         position: relative;
-        background: url("../assets/images/1.png") no-repeat;
+
+        // Đây là dòng QUAN TRỌNG NHẤT
+        background: url("../assets/images/1.png") center top // vị trí bắt đầu
+            / cover // phóng to vừa full width + height mà không méo
+            no-repeat; // không lặp lại
+
+        // Hoặc viết đầy đủ hơn (rõ ràng nhất)
+        background-image: url("../assets/images/1.png");
+        background-position: center top; // hoặc center center tùy bạn muốn căn thế nào
+        background-size: cover; // QUAN TRỌNG: cover = tràn full, cắt phần thừa, không méo
+        background-repeat: no-repeat;
+        background-color: rgb(243, 197, 197); // fallback color nếu hình lỗi
 
         .background-bot {
-            max-width: 1440px;
-            height: 538px;
-            flex-shrink: 0;
-            aspect-ratio: 1441/538;
-            background: url("../assets/images/2.png") no-repeat;
+            width: 100vw; // tràn full viewport
+            min-height: 334px;
+            left: 0;
+            right: 0;
+            background-image: url("../assets/images/2.png");
+            background-position: center bottom;
+            background-size: cover; // THÊM DÒNG NÀY LÀ XONG!
+            background-repeat: no-repeat;
             position: absolute;
-            bottom: -104px;
-
+            bottom: 0px;
             z-index: 14;
+
+
+        }
+
+        // 👉 Responsive cho màn từ 1440px trở lên
+        @media (min-width: 1441px) {
+            min-height: 900px;
+
+            .background-bot {
+                min-height: 440px;
+                bottom: -0px;
+
+            }
+        }
+
+
+        // @media (min-width: 1886px) {
+
+        //     min-height: 1000px;
+
+        //     .background-bot {
+        //         min-height: 585px;
+        //         bottom: -0px;
+        //     }
+        // }
+
+        // 👉 Responsive cho màn từ 1440px trở lên
+        @media (min-width: 2000px) {
+            min-height: 1000px;
+
+            .background-bot {
+                min-height: 495px;
+
+            }
         }
     }
 

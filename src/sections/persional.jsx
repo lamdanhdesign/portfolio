@@ -5,7 +5,7 @@ import hanhtinhdo from "../assets/images/2569567-05.png";
 function Persional() {
   return (
     <>
-      <section className="personal-info">
+      <section className="personal-info" id="about-me">
         <div className="background-top"></div>
         <div className="title_info">
           <div className="info_">

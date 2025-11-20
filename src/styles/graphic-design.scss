@@ -1,5 +1,5 @@
 .graphic-design-section {
-    max-width: 1440px;
+    max-width: 100%;
     height: auto;
     background: linear-gradient(0deg, #120030 0%, #120030 100%);
     color: #fff;
@@ -14,7 +14,7 @@
 
     .background-1 {
         width: 1244px;
-        height: 1096px;
+        min-height: 1096px;
         flex-shrink: 0;
         position: absolute;
         z-index: 4;
@@ -37,7 +37,7 @@
 
         .content-images {
             width: 100%;
-            height: 1096px;
+            min-height: 1096px;
         }
 
         .wrap-title {
@@ -294,24 +294,28 @@
     }
 
     .background-bot {
+        position: relative;
         width: 100%;
         height: auto;
-        position: relative;
-        z-index: 1; // 👈 thêm dòng này
-        margin-top: 31px;
+        z-index: 1;
 
+        // Giải pháp chuẩn, không lỗi Sass
+        margin-top: calc(31px + (100vw - 1441px) * 0.15);
 
         img {
             position: absolute;
-            z-index: 1;
             bottom: -35px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 3;
             mix-blend-mode: screen;
-            width: 1440px;
+            width: 100%;
+            height: auto;
+        }
 
-
+        // Nếu muốn tinh chỉnh thêm ở màn siêu rộng (tùy chọn)
+        @media (min-width: 1550px) {
+            margin-top: calc(31px + (100vw - 1441px) * 0.5);
         }
 
     }
