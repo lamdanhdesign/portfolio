@@ -75,6 +75,13 @@
 
             }
         }
+
+        @media (min-width: 2250px) {
+
+            .background-bot {
+                min-height: 545px;
+            }
+        }
     }
 
     .welcome_portfolio {
