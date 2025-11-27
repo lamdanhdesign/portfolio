@@ -56,15 +56,7 @@
         }
 
 
-        // @media (min-width: 1886px) {
 
-        //     min-height: 1000px;
-
-        //     .background-bot {
-        //         min-height: 585px;
-        //         bottom: -0px;
-        //     }
-        // }
 
         // 👉 Responsive cho màn từ 1440px trở lên
         @media (min-width: 2000px) {
@@ -80,6 +72,12 @@
 
             .background-bot {
                 min-height: 594px;
+            }
+        }
+
+        @media (min-width: 1024px) and (max-width: 1400px) {
+            .background-bot {
+                min-height: 292px;
             }
         }
     }

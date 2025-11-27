@@ -34,6 +34,7 @@
         }
 
 
+
     }
 
     // 2. Vòng tròn gradient tím (giữ nguyên vị trí tương đối)
@@ -429,6 +430,35 @@
             opacity: 0.7;
 
 
+        }
+    }
+
+    @media (min-width: 1024px) {
+
+        .background-top {
+            min-height: 178px;
+        }
+
+        .title_info {
+
+
+            .info_ {
+
+
+                .p_1 {
+                    font-size: 125px;
+                }
+
+                .p_2 {
+                    font-size: 65px;
+                }
+
+            }
+
+            .p_3 {
+                font-size: 34px;
+                top: 321px;
+            }
         }
     }
 }
