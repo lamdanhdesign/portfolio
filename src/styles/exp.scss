@@ -236,4 +236,68 @@
             border: none;
         }
     }
+
+    // 👉 Responsive cho màn từ 1440px trở lên
+    @media (min-width: 1441px) {
+        .graphic-design {
+            left: 430px !important;
+        }
+
+        .hanh-tinh-sunny {
+            right: 424px !important;
+
+        }
+
+        .hanh-tinh-blue {
+            left: 424px !important;
+
+        }
+
+        .web-design {
+            right: 424px !important;
+
+        }
+    }
+
+    @media (min-width: 2560px) {
+        .graphic-design {
+            left: 635px !important;
+        }
+
+        .hanh-tinh-sunny {
+            right: 635px !important;
+
+        }
+
+        .hanh-tinh-blue {
+            left: 635px !important;
+
+        }
+
+        .web-design {
+            right: 635px !important;
+
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .graphic-design {
+            left: 0px !important;
+        }
+
+        .hanh-tinh-sunny {
+            right: -20px !important;
+
+        }
+
+        .hanh-tinh-blue {
+            left: -20px !important;
+
+        }
+
+        .web-design {
+            right: 0px !important;
+
+        }
+    }
 }
