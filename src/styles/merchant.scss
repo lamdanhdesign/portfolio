@@ -151,14 +151,13 @@
                     rgba(180, 126, 247, 0) 100%);
         }
 
-        .image-mobile-center {
+        .image-mobile-center-wrapper {
             position: absolute;
             top: 50%;
             left: 50%;
-            transform: translate(-50%, -50%); // canh chính giữa
-            width: 245.772px;
-            height: 495.695px;
-            z-index: 2; // nổi lên trên background
+            transform: translate(-50%, -50%);
+            /* Giữ canh giữa */
+            z-index: 2;
         }
 
         .image-mobile-1 {
@@ -170,6 +169,7 @@
             flex-shrink: 0;
             aspect-ratio: 251 / 122;
             top: 42%;
+            z-index: 22;
         }
 
         .image-mobile-2 {
@@ -181,6 +181,7 @@
             flex-shrink: 0;
             aspect-ratio: 223.8 / 76;
             top: 37%;
+            z-index: 22;
 
 
         }
@@ -193,22 +194,24 @@
             flex-shrink: 0;
             aspect-ratio: 196.86 / 192.16;
             bottom: 93px;
-            z-index: 3;
+            z-index: 22;
         }
+
+
     }
 
-    .background-bot {
+    .background-bot-1 {
         width: 100%;
         height: auto;
         position: absolute;
         z-index: 5;
-        bottom: 100px;
+        // bottom: 100px;
         left: 0%;
 
         img {
             position: absolute;
             z-index: 1;
-            bottom: 24px;
+            bottom: -60px;
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -216,28 +219,21 @@
             height: 44.723px;
             flex-direction: column;
             justify-content: center;
-            flex-shrink: 0;
         }
 
         span {
             position: absolute;
             z-index: 2;
-            bottom: 30px; // điều chỉnh vị trí tùy ý
+            bottom: -53px;
             left: 50%;
             transform: translateX(-50%);
-
-
             color: #FFF;
             text-align: center;
-
-
-            /* Font/Heading 6/SemiBold */
             font-family: Inter;
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
             line-height: 31px;
-            /* 120% */
             letter-spacing: 0.03px;
         }
     }
@@ -280,123 +276,137 @@
         z-index: 12;
     }
 
-    .content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1216px;
-        margin: 0 auto 225px auto;
-        gap: 32px;
 
-        .title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #b884ff, #f7a9ff);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+}
 
-            @media (min-width: 1441px) {
-                margin-top: 40px;
-            }
-        }
+.content-2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1216px;
+    margin: 0 auto 225px auto;
+    gap: 32px;
+    position: absolute;
 
-        .subtitle {
-            font-size: 1.1rem;
-            color: #ffba6b;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
+    .title {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+        background: linear-gradient(90deg, #b884ff, #f7a9ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
 
-        .desc {
-            font-size: 1rem;
-            color: #e4d8ff;
-            line-height: 1.6;
+        @media (min-width: 1441px) {
+            margin-top: 40px;
         }
     }
 
-    .image-mobile {
+    .subtitle {
+        font-size: 1.1rem;
+        color: #ffba6b;
+        margin-bottom: 10px;
+        font-style: italic;
+    }
 
-        width: 45%;
+    .desc {
+        font-size: 1rem;
+        color: #e4d8ff;
+        line-height: 1.6;
+    }
+}
+
+.image-mobile-content-2 {
+
+    width: 45%;
+    height: 674px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    position: relative; // cần để ảnh con position tuyệt đối
+
+    margin-top: 30px;
+
+    .image-mobile-background-2 {
+        width: 674px;
         height: 674px;
-        flex-shrink: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 auto;
-        position: relative; // cần để ảnh con position tuyệt đối
-
-        margin-top: 30px;
-
-        .image-mobile-background {
-            width: 674px;
-            height: 674px;
-            border-radius: 50%;
-            background: radial-gradient(50% 50% at 50% 50%,
-                    rgba(213, 110, 255, 0.4) 0%,
-                    rgba(180, 126, 247, 0) 100%);
-        }
-
-        .image-mobile-center {
-            position: absolute;
-            top: 48%;
-            left: 35%;
-            transform: translate(-50%, -50%); // canh chính giữa
-            width: 276px;
-            height: 557px;
-            flex-shrink: 0;
-            aspect-ratio: 276/557;
-            z-index: 3; // nổi lên trên background
-        }
-
-        .image-mobile-center-2 {
-            position: absolute;
-            top: 60%;
-            left: 68%;
-            transform: translate(-50%, -50%); // canh chính giữa
-
-            z-index: 2; // nổi lên trên backgroundwidth: 276px;
-            height: 557px;
-            flex-shrink: 0;
-            aspect-ratio: 276/557;
-        }
-
-        .image-mobile-1 {
-            position: absolute;
-            left: 0;
-            z-index: 3;
-            width: 251px;
-            height: 122px;
-            flex-shrink: 0;
-            aspect-ratio: 251/122;
-            top: 48%;
-        }
-
-        .image-mobile-2 {
-            position: absolute;
-            right: 0;
-            z-index: 3;
-            width: 265px;
-            height: 122px;
-            flex-shrink: 0;
-            aspect-ratio: 265/122;
-            top: 20%;
-        }
-
-        .image-mobile-3 {
-            position: absolute;
-            right: 0;
-            width: 221px;
-            height: 216px;
-            flex-shrink: 0;
-            aspect-ratio: 221/216;
-            bottom: 60px;
-            z-index: 3;
-        }
+        border-radius: 50%;
+        background: radial-gradient(50% 50% at 50% 50%,
+                rgba(213, 110, 255, 0.4) 0%,
+                rgba(180, 126, 247, 0) 100%);
     }
+
+    .image-mobile-center {
+        position: absolute;
+        top: 10%;
+        left: 5%;
+        transform: translate(-50%, -50%); // canh chính giữa
+        width: 276px;
+        height: 557px;
+        flex-shrink: 0;
+        aspect-ratio: 276/557;
+        z-index: 3; // nổi lên trên background
+    }
+
+    .image-mobile-center-2 {
+        position: absolute;
+        top: 22%;
+        left: 40%;
+        transform: translate(-50%, -50%); // canh chính giữa
+
+        z-index: 2; // nổi lên trên backgroundwidth: 276px;
+        height: 557px;
+        flex-shrink: 0;
+        aspect-ratio: 276/557;
+    }
+
+    .image-mobile-1 {
+        position: absolute;
+        left: 0;
+        z-index: 3;
+        width: 251px;
+        height: 122px;
+        flex-shrink: 0;
+        aspect-ratio: 251/122;
+        top: 48%;
+    }
+
+    .image-mobile-2 {
+        position: absolute;
+        right: 0;
+        z-index: 3;
+        width: 265px;
+        height: 122px;
+        flex-shrink: 0;
+        aspect-ratio: 265/122;
+        top: 20%;
+    }
+
+    .image-mobile-3 {
+        position: absolute;
+        right: 0;
+        width: 221px;
+        height: 216px;
+        flex-shrink: 0;
+        aspect-ratio: 221/216;
+        bottom: 60px;
+        z-index: 3;
+    }
+}
+
+
+
+.content-wrap {
+    max-width: 53%;
+    margin-top: 110px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 52px;
+    height: 553px;
 
     .background-bot {
-
         position: relative;
         z-index: 5; // 👈 thêm dòng này
 
@@ -446,69 +456,59 @@
         }
     }
 
-    .content-wrap {
-        max-width: 53%;
-        margin-top: 110px;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 52px;
-        height: 553px;
+    .content-text {
 
-        .content-text {
+        li {
+            color: #fff;
+            text-align: left;
+            font-family: Inter;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 32px;
 
-            li {
-                color: #fff;
-                text-align: left;
+            span {
+                color: var(--Light-Mode-Gray-Scale-0, #FFF);
+
+                /* Font/Heading 5/Regular */
                 font-family: Inter;
-                font-size: 26px;
+                font-size: 22px;
                 font-style: normal;
-                font-weight: 700;
+                font-weight: 300;
                 line-height: 32px;
-
-                span {
-                    color: var(--Light-Mode-Gray-Scale-0, #FFF);
-
-                    /* Font/Heading 5/Regular */
-                    font-family: Inter;
-                    font-size: 22px;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: 32px;
-                }
             }
         }
     }
+}
 
-    .background-arrow {
+.background-arrow {
 
-        width: 100%;
-        height: 70px;
-        position: absolute;
-        z-index: 10;
-        bottom: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
+    width: 100%;
+    height: 70px;
+    position: absolute;
+    z-index: 10;
+    bottom: 87px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
 
-        img {
-            width: 36px;
-            height: 36px;
-            transform: rotate(-90deg);
-            flex-shrink: 0;
-            aspect-ratio: 1/1;
-        }
-    }
-
-    .background-phi-hanh-gia {
-        right: 45%;
-        bottom: 145px;
-        position: absolute;
-        width: 127px;
-        height: 110px;
+    img {
+        width: 36px;
+        height: 36px;
+        transform: rotate(-90deg);
         flex-shrink: 0;
-        aspect-ratio: 127 / 110;
-
+        aspect-ratio: 1/1;
     }
+}
+
+.background-phi-hanh-gia {
+    right: 47%;
+    bottom: 254px;
+    position: absolute;
+    width: 127px;
+    height: 110px;
+    flex-shrink: 0;
+    aspect-ratio: 127 / 110;
+
 }
