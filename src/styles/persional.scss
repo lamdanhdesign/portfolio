@@ -295,11 +295,11 @@
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        width: 100vw; // luôn full viewport width
+        width: 100vw;
         min-height: 741px;
         bottom: -25%;
         z-index: 11;
-        pointer-events: none; // không chặn click
+        pointer-events: none;
         overflow: hidden;
 
         display: flex;
@@ -308,56 +308,48 @@
         padding: 20px 0;
         gap: 12px;
 
-        // Hình nền Subtract.png – responsive hoàn hảo
-        background: url('../assets/images/Subtract.png') center bottom no-repeat;
+        background: url('../assets/images/Subtract.png') no-repeat;
+        background-size: 100vw auto;
 
-        // Mặc định (mobile & màn nhỏ): giữ nguyên tỷ lệ, không bị méo, căn giữa
-        background-size: contain; // hoặc auto nếu bạn muốn giữ đúng px
-
-        // Từ 1441px trở lên: tràn full width, giữ nguyên tỷ lệ, không méo
         @media (min-width: 1441px) {
-            background-size: 100vw auto; // width = 100vw, height tự tính → KHÔNG MÉO
-            // hoặc nếu bạn thích cắt nhẹ 2 bên cho "hoành tráng" hơn:
-            // background-size: cover;
+            background-size: 100vw auto;
         }
 
-        .poster_1 {
-            width: 292px;
-            height: 446px;
+        // DEFAULT STRUCTURE
+        .poster_1,
+        .poster_2,
+        .poster_3,
+        .poster_4 {
             flex-shrink: 0;
             z-index: 12;
+            background-size: cover;
+            background-position: center;
 
-            background: url('../assets/images/Rectangle 16.png');
+            // responsive width
+            width: clamp(110px, 20vw, 280px);
+        }
+
+        // Poster ratio definitions
+        .poster_1 {
+            background-image: url('../assets/images/Rectangle 16.png');
+            height: calc((446 / 292) * clamp(110px, 20vw, 280px));
         }
 
         .poster_2 {
-            width: 292px;
-            height: 433px;
-            flex-shrink: 0;
-            z-index: 12;
-
-            background: url('../assets/images/Rectangle 10.png');
+            background-image: url('../assets/images/Rectangle 10.png');
+            height: calc((433 / 292) * clamp(110px, 20vw, 280px));
         }
 
         .poster_3 {
-            width: 292px;
-            height: 433px;
-            flex-shrink: 0;
-
-            z-index: 12;
-            background: url('../assets/images/Rectangle 20.png');
+            background-image: url('../assets/images/Rectangle 20.png');
+            height: calc((433 / 292) * clamp(110px, 20vw, 280px));
         }
 
         .poster_4 {
-            width: 292px;
-            height: 448px;
-
-            z-index: 12;
-            flex-shrink: 0;
-            background: url('../assets/images/Rectangle 21.png');
+            background-image: url('../assets/images/Rectangle 21.png');
+            height: calc((448 / 292) * clamp(110px, 20vw, 280px));
         }
     }
-
 
     .title_info {
         display: flex;
@@ -418,7 +410,6 @@
                 -webkit-text-fill-color: transparent;
 
             }
-
 
         }
 
