@@ -338,5 +338,72 @@
             mix-blend-mode: screen;
         }
     }
+}
 
+@media (max-width: 1024px) {
+    .graphic-design-section .image-mobile .poster-sub2 {
+        width: 300px;
+        height: 420px;
+
+    }
+
+    .graphic-design-section .image-mobile .poster-main {
+        width: 300px;
+        height: 420px;
+
+    }
+
+    .graphic-design-section .image-mobile .poster-sub1 {
+        width: 300px;
+        height: 420px;
+
+    }
+
+    .graphic-design-section .logo-layout .logo-item-1 {
+        width: 300px;
+        height: 190px;
+        border-radius: 12px;
+        margin-top: 15px;
+        flex-shrink: 0;
+    }
+
+    .graphic-design-section .logo-layout .logo-item-2 {
+        width: 300px;
+        height: 190px;
+        border-radius: 12px;
+        margin-top: 15px;
+        flex-shrink: 0;
+    }
+
+    .graphic-design-section .logo-layout .logo-item-3 {
+        width: 300px;
+        height: 190px;
+        border-radius: 12px;
+        margin-top: 15px;
+        flex-shrink: 0;
+    }
+
+    .graphic-design-section .social-layout .social-1 {
+        width: 270px;
+        height: 250px;
+
+    }
+
+    .graphic-design-section .social-layout .social-2 {
+        width: 270px;
+        height: 250px;
+
+    }
+
+    .graphic-design-section .social-layout .social-3 {
+        width: 270px;
+        height: 250px;
+
+    }
+
+    .graphic-design-section .branding-layout .branding-item {
+        width: 305px;
+        height: 200px;
+
+    }
 }

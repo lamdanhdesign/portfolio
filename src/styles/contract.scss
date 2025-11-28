@@ -376,3 +376,27 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .thankyou-card {
+        position: relative;
+        padding: 50px 60px;
+        max-width: 867px;
+
+    }
+
+    .left-section h1 {
+        font-size: 29px;
+
+    }
+
+    .contact-list {
+        display: flex;
+        gap: 21px;
+    }
+
+    .contact-item .value {
+        font-size: 15px;
+        font-weight: 600;
+    }
+}
