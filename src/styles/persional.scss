@@ -433,7 +433,7 @@
         }
     }
 
-    @media (min-width: 1024px) {
+    @media (max-width: 1024px) {
 
         .background-top {
             min-height: 178px;
@@ -459,6 +459,26 @@
                 font-size: 34px;
                 top: 321px;
             }
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .background4 {
+            display: none;
+        }
+
+        .background5 {
+            display: none;
+        }
+
+        .info_1 {
+            top: 20%;
+            right: 3%;
+        }
+
+        .info_2 {
+            left: 6%;
+            top: 31%;
         }
     }
 }
