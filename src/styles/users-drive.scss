@@ -185,6 +185,7 @@
             height: 445.257px;
             flex-shrink: 0;
             aspect-ratio: 221.01/445.26;
+            z-index: 21;
         }
 
         .image-mobile-1 {
@@ -192,6 +193,7 @@
             height: 503.656px;
             flex-shrink: 0;
             aspect-ratio: 250.00/503.66;
+            z-index: 21;
         }
 
         .image-mobile-2 {
@@ -199,6 +201,7 @@
             height: 503.656px;
             flex-shrink: 0;
             aspect-ratio: 250.00/503.66;
+            z-index: 21;
         }
 
         .image-mobile-3 {
@@ -207,6 +210,7 @@
             height: 445.257px;
             flex-shrink: 0;
             aspect-ratio: 221.01/445.26;
+            z-index: 21;
         }
     }
 
@@ -238,6 +242,7 @@
             height: 503.656px;
             flex-shrink: 0;
             aspect-ratio: 250.00/503.66;
+            z-index: 21;
         }
 
         .image-mobile-1 {
@@ -246,6 +251,7 @@
             flex-shrink: 0;
             aspect-ratio: 221.01/445.26;
             margin-top: 20px;
+            z-index: 21;
         }
 
         .image-mobile-2 {
@@ -254,6 +260,7 @@
             flex-shrink: 0;
             aspect-ratio: 221.01/445.26;
             margin-top: 20px;
+            z-index: 21;
         }
 
         .image-mobile-3 {
@@ -262,6 +269,7 @@
             height: 503.656px;
             flex-shrink: 0;
             aspect-ratio: 250.00/503.66;
+            z-index: 21;
         }
     }
 
@@ -305,6 +313,73 @@
             line-height: 24px;
             /* 120% */
             letter-spacing: 0.03px;
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .users-drive-section .content .desc {
+        font-size: 24px;
+    }
+
+    .users-drive-section .content .desc-2 {
+        font-size: 24px;
+    }
+
+    .image-mobile {
+
+        gap: 11px !important;
+        margin-top: 30px;
+
+        .image-mobile-center {
+            width: 171.013px; // 221.013 - 50
+            height: 395.257px; // 445.257 - 50
+        }
+
+        .image-mobile-1 {
+            width: 200px; // 250 - 50
+            height: 453.656px; // 503.656 - 50
+        }
+
+        .image-mobile-2 {
+            width: 200px; // 250 - 50
+            height: 453.656px; // 503.656 - 50
+        }
+
+        .image-mobile-3 {
+            width: 171.013px; // 221.013 - 50
+            height: 395.257px; // 445.257 - 50
+        }
+    }
+
+    .image-mobile-layout-2 {
+
+        gap: 11px !important;
+        margin-top: 30px;
+
+        .image-mobile-center {
+            width: 200px; // 250 - 50
+            height: 453.656px; // 503.656 - 50
+            z-index: 21;
+        }
+
+        .image-mobile-1 {
+            width: 171.013px; // 221.013 - 50
+            height: 395.257px; // 445.257 - 50
+            margin-top: 20px;
+            z-index: 21;
+        }
+
+        .image-mobile-2 {
+            width: 171.013px; // 221.013 - 50
+            height: 395.257px; // 445.257 - 50
+            margin-top: 20px;
+        }
+
+        .image-mobile-3 {
+            width: 200px; // 250 - 50
+            height: 453.656px; // 503.656 - 50
+            z-index: 21;
         }
     }
 }

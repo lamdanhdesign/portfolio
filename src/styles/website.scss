@@ -535,3 +535,16 @@
     pointer-events: none;
     transition: opacity 0.3s ease, visibility 0.3s ease;
 }
+
+@media (max-width: 1024px) {
+    .website-section .website-swiper .swiper-slide.swiper-slide-active img {
+        width: 420px;
+        height: 650px;
+    }
+
+    .website-section .content {
+
+        height: 1386px;
+        margin-top: 0px;
+    }
+}
