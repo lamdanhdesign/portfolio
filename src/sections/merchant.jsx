@@ -21,6 +21,7 @@ const MerchantSection = () => {
   const listItemControls = useAnimation();
   const mainImagesControls = useAnimation();
   const mainImagesSection1Controls = useAnimation();
+  const mainPopoupBackgroundSection1Controls = useAnimation(); // nền tím của section 1
   const backgroundImagesSection1Controls = useAnimation();
   const backgroundImagesSection2Controls = useAnimation();
 
@@ -61,6 +62,8 @@ const MerchantSection = () => {
 
   useEffect(() => {
     if (isInView) {
+      const isTablet = window.innerWidth <= 1024;
+
       // Khi scroll xuống → ẩn content 1, hiện content 2
       titleControls.start("exit");
       subtitleControls.start("exit");
@@ -74,7 +77,13 @@ const MerchantSection = () => {
       });
       mainImagesSection1Controls.start({
         opacity: 1,
-        x: -440,
+        x: isTablet ? -359 : -440,
+        y: -320,
+        transition: { duration: 0.9, ease: "easeOut" },
+      });
+      mainPopoupBackgroundSection1Controls.start({
+        opacity: 1,
+        x: isTablet ? -240 : -440,
         y: -320,
         transition: { duration: 0.9, ease: "easeOut" },
       });
@@ -110,6 +119,12 @@ const MerchantSection = () => {
       });
       // ✨ CHỈNH SỬA: trả ảnh về đúng vị trí x = 0
       mainImagesSection1Controls.start({
+        opacity: 1,
+        x: 0,
+        y: 0,
+        transition: { duration: 0.9, ease: "easeOut" },
+      });
+      mainPopoupBackgroundSection1Controls.start({
         opacity: 1,
         x: 0,
         y: 0,
@@ -206,7 +221,7 @@ const MerchantSection = () => {
             <div className="image-mobile">
               <motion.div
                 initial={{ opacity: 1, rotate: 0 }}
-                animate={mainImagesSection1Controls}
+                animate={mainPopoupBackgroundSection1Controls}
                 className="image-mobile-background"
               ></motion.div>
 
