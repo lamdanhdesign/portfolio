@@ -63,6 +63,7 @@ const MerchantSection = () => {
   useEffect(() => {
     if (isInView) {
       const isTablet = window.innerWidth <= 1024;
+      const is768px = window.innerWidth <= 768;
 
       // Khi scroll xuống → ẩn content 1, hiện content 2
       titleControls.start("exit");
@@ -77,7 +78,7 @@ const MerchantSection = () => {
       });
       mainImagesSection1Controls.start({
         opacity: 1,
-        x: isTablet ? -359 : -440,
+        x: is768px ? -241 : isTablet ? -359 : -440,
         y: -320,
         transition: { duration: 0.9, ease: "easeOut" },
       });
@@ -213,9 +214,10 @@ const MerchantSection = () => {
                 variants={textVariants}
                 style={{ display: "inline-block" }}
               >
-                quản lý toàn diện thực đơn, theo dõi và xử lý đơn hàng liên mạch
+                quản lý toàn diện thực đơn, theo dõi và xử lý đơn hàng liên
+                mạch,
               </motion.span>
-              , tăng tốc độ vận hành.
+              tăng tốc độ vận hành.
             </motion.p>
             {/* Ảnh chính + 3 ảnh con */}
             <div className="image-mobile">
@@ -343,7 +345,13 @@ const MerchantSection = () => {
             <img src={leftArrow} alt="" />
             <img src={leftArrow} alt="" />
           </motion.div>
-          <img className="background-phi-hanh-gia" src={phiHanhGia} alt="" />
+          <motion.img
+            initial={{ opacity: 1, rotate: 0 }}
+            animate={backgroundImagesSection2Controls}
+            className="background-phi-hanh-gia"
+            src={phiHanhGia}
+            alt=""
+          />
         </motion.div>
       </div>
 

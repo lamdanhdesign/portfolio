@@ -149,4 +149,22 @@
             }
         }
     }
+
+    @media (max-width: 768px) {
+        .title_info p:first-child {
+            font-size: 40px;
+        }
+
+        .title_info .exp-mo-ta_p {
+            max-width: 700px;
+        }
+
+        .general-images {
+            img {
+                height: 100%;
+                width: 100%;
+                margin-top: 406px
+            }
+        }
+    }
 }

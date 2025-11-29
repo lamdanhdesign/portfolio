@@ -300,4 +300,49 @@
 
         }
     }
+
+}
+
+@media (max-width: 768px) {
+    .exp .exp-hanh-tinh img {
+        max-width: 700px;
+    }
+
+    .exp .exp-hanh-tinh .hanh-tinh-tim {
+        max-width: 700px;
+        max-width: 200px;
+    }
+
+    .exp .exp-hanh-tinh .hanh-tinh-blue {
+        max-width: 200px;
+    }
+
+    .exp .exp-hanh-tinh .hanh-tinh-sunny {
+        max-width: 200px;
+    }
+
+    .graphic-design {
+        left: 23px !important;
+    }
+
+    .hanh-tinh-sunny {
+        top: 64% !important;
+        right: -20px !important;
+
+    }
+
+    .hanh-tinh-blue {
+        left: -6px !important;
+        top: 64% !important;
+
+    }
+
+    .web-design {
+        right: 23px !important;
+
+    }
+
+    .exp .exp-hanh-tinh .mobile-app {
+        bottom: -27% !important;
+    }
 }
