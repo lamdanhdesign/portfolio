@@ -201,3 +201,14 @@
         line-height: 52px;
     }
 }
+
+@media (max-width: 768px) {
+    .wrapp .porfolio-text {
+        font-size: 152px;
+        letter-spacing: 18px;
+    }
+
+    .wrapp .hero-container .background-bot {
+        min-height: 292px;
+    }
+}

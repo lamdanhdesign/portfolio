@@ -482,3 +482,72 @@
         }
     }
 }
+
+@media (max-width: 768px) {
+
+    .info_2 {
+        transform: rotate(-8deg) scale(0.8) !important;
+        /* 0.7 → 0.8 */
+        padding: 9px !important;
+        gap: 8px !important;
+    }
+
+    .info_2 .text_2 {
+        width: 220px !important;
+        /* 200 → 220 */
+        padding: 9px !important;
+        gap: 9px !important;
+    }
+
+    .info_2 .text_2 .text_p1 {
+        font-size: 22px !important;
+        /* 20 → 22 */
+        line-height: 26px !important;
+        height: 26px !important;
+    }
+
+    .info_2 .text_2 .text_p2 {
+        gap: 6px !important;
+        /* 5 → 6 */
+        height: 20px !important;
+        /* 18 → 20 */
+    }
+
+    .info_2 .text_2 .text_p2 p {
+        font-size: 13px !important;
+        /* 12 → 13 */
+        line-height: 20px !important;
+    }
+
+    .info_1 {
+        transform: rotate(8deg) scale(0.8) !important;
+        /* giảm giống info_2 */
+        padding: 9px !important;
+        gap: 8px !important;
+        border-radius: 14px !important;
+    }
+
+    .info_1 .text {
+        width: 220px !important;
+        padding: 9px !important;
+        gap: 9px !important;
+    }
+
+    .info_1 .text .text_p1,
+    .info_1 .text .text_p1 span,
+    .info_1 .text .text_p2,
+    .info_1 .text .text_p3 {
+        font-size: 13px !important;
+        line-height: 20px !important;
+    }
+
+    .personal-info .info_2 {
+        left: 2%;
+        top: 32%;
+    }
+
+    .personal-info .info_1 {
+        top: 27%;
+        right: -1%;
+    }
+}
